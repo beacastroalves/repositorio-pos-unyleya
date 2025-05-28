@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Inscrição</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h2>Formulário de Inscrição</h2>
+      <form id="inscricaoForm">
+        <div class="form-group">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required>
+          <div class="error-message" id="nomeError"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <div class="error-message" id="emailError"></div>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required minlength="6">
+          <div class="error-message" id="senhaError"></div>
+        </div>
+        <div class="form-group">
+          <label for="confirmarSenha">Confirmar Senha:</label>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+          <div class="error-message" id="confirmarSenhaError"></div>
+        </div>
+        <div class="form-group">
+          <label for="areaInteresse">Área de Interesse:</label>
+          <select id="areaInteresse" name="areaInteresse" required>
+            <option value="">Selecione uma área</option>
+            <option value="desenvolvimento">Desenvolvimento Web</option>
+            <option value="design">Design UX/UI</option>
+            <option value="marketing">Backend</option>
+            <option value="dados">Análise de Dados</option>
+          </select>
+          <div class="error-message" id="areaInteresseError"></div>
+        </div>
+        <button type="submit">Inscrever-se</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
