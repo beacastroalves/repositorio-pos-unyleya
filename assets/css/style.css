@@ -47,7 +47,7 @@ main {
   margin: 30px auto;
 }
 
-.discipline-section {
+.discipline {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -55,7 +55,7 @@ main {
   padding: 30px;
 }
 
-.discipline-section h2 {
+.discipline h2 {
   color: #013d7e;
   margin-bottom: 24px;
   border-bottom: 2px solid #e9ecef;
@@ -133,11 +133,11 @@ footer {
     margin: 20px auto;
   }
 
-  .discipline-section {
+  .discipline {
     padding: 20px;
   }
 
-  .discipline-section h2 {
+  .discipline h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
   }
