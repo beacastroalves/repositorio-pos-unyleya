@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const isConfirmarSenhaValid = validarConfirmarSenha();
     const isAreaInteresseValid = validarAreaInteresse();
 
+    
+
     // Se todas as validações passarem, o formulário pode ser enviado
     if (isNomeValid && isEmailValid && isSenhaValid && isConfirmarSenhaValid && isAreaInteresseValid) {
       alert('Formulário enviado com sucesso!');
