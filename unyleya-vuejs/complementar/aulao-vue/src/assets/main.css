@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #232323;
+  color: rgb(217, 217, 217);
+
+}
+
+#app {
+  font-weight: normal;
+}
+
+header {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 16px;
+  background-color: #822929;
+  font-weight: bold;
+  padding: 16px;
+  text-align: center;
+}
+
+.componente {
+  text-align: center;
+  border: 2px solid #822929;
+  background-color: #271616;
+  border-radius: 16px;
+  margin: 32px;
+  padding: 16px;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+button {
+  background-color: #a34d4d;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  margin: 4px 8px;
+  border: none;
+  border-radius: 2px;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #792f2f;
+}
+
+button:active {
+  transform: translate(1px, 1px);
+}
+
+input {
+  padding: 8px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 24px;
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
