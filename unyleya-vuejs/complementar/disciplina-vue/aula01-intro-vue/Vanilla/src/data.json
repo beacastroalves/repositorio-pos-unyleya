@@ -1,0 +1,8 @@
+[
+  { "tarefa": "Jogar Videogame", "situacao":false },
+  { "tarefa": "Estudar", "situacao":true },
+  { "tarefa": "Ver séries", "situacao":false },
+  { "tarefa": "Revisar", "situacao":true },
+  { "tarefa": "Praticar", "situacao":true },
+  { "tarefa": "Bate Papo", "situacao":false }
+]
