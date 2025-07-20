@@ -1,3 +1,4 @@
+<!-- Reactive interagindo com o usuario
 <script setup>
 import { reactive } from 'vue';
 const evento = reactive({});
@@ -37,6 +38,7 @@ const salvarEvento = () => eventos.push({...evento});
     <pre>{{ eventos }}</pre>
   </main>
 </template>
+ -->
 
 <!-- Templates dinamicos v-for para renderizar cada item de listas de forma dinamica
 <script setup>
@@ -430,4 +432,5 @@ header {
     flex-wrap: wrap;
   }
 }
-</style> -->
+</style>
+-->
