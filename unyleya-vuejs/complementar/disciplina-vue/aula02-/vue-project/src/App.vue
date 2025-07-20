@@ -1,3 +1,43 @@
+<script setup>
+import { reactive } from 'vue';
+const evento = reactive({});
+const eventos = reactive([]);
+const salvarEvento = () => eventos.push({...evento});
+</script>
+
+<template>
+  <main>
+    <input v-model="evento.nome" />
+    <br>
+    <textarea v-model="evento.descricao"></textarea>
+    <br>
+    <input type="checkbox" v-model="evento.publicado" />
+    Publicado <br>
+
+    <input type="radio" value="ce" v-model="evento.local" /> CE
+    <input type="radio" value="rn" v-model="evento.local" /> RN
+    <input type="radio" value="pe" v-model="evento.local" /> PE
+    <input type="radio" value="ba" v-model="evento.local" /> BA
+    <br>
+
+    Organizadores:
+    <select v-model="evento.organizador">
+      <option>Marie Curie</option>
+      <option>Nikola Teura</option>
+      <option>Allan Turing</option>
+    </select>
+    <br>
+
+    Capacidade:
+    <input v-model.number="evento.capacidade" />
+    <br>
+
+    <button @click="salvarEvento">Salvar</button>
+
+    <pre>{{ eventos }}</pre>
+  </main>
+</template>
+
 <!-- Templates dinamicos v-for para renderizar cada item de listas de forma dinamica
 <script setup>
 const pessoas = [
