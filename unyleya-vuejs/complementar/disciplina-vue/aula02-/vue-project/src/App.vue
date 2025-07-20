@@ -1,3 +1,93 @@
+<!-- Templates dinamicos v-for para renderizar cada item de listas de forma dinamica
+<script setup>
+const pessoas = [
+  'Marie Curie',
+  'Nikola Teura',
+  'Allan Turing',
+  'Joao Jose'
+];
+</script>
+
+<template>
+  <main>
+    <ul>
+      <li v-for="pessoa in pessoas">{{ pessoa }}</li>
+    </ul>
+  </main>
+</template>
+-->
+
+<!-- Templates dinamicos v-show parecido com um v-if, pois depende da condição para "exibir" 
+<script setup>
+import { ref } from 'vue';
+const nome = ref('');
+</script>
+
+<template>
+  <main>
+    <input v-model="nome" />
+    <div v-show="nome.length < 3">
+      Informe um nome com mais de 3 letras
+    </div>
+    <div v-show="nome.length >= 3 && nome.length < 10">
+      Ola, {{ nome }}!
+    </div>
+    <div v-show="nome.length >= 10">
+      Ola, {{ nome }}!
+      <br>
+      Você não quer abreviar o seu nome?
+    </div>
+  </main>
+</template>
+-->
+
+<!-- Templates dinamicos v-if: so vai acontecer se a condição for verdadeira, é reativo / v-else vai renderizar conforme o if falso / v-else-if com condição indicada (uso do if / else if / else como estrutura condicional)
+<script setup>
+import { ref } from 'vue';
+const nome = ref('');
+</script>
+
+<template>
+  <main>
+    <input v-model="nome" />
+    <div v-if="nome.length < 3">Informe um nome com mais de 3 letras</div>
+    <div v-else-if="nome.length < 10">Ola, {{ nome }}!</div>
+    <div v-else>
+      Ola, {{ nome }}!
+      <br>
+      Você não quer abreviar o seu nome?
+    </div>
+  </main>
+</template>
+-->
+
+<!-- Templates dinamicos v-bind: unilateral / v-model: bilateral
+<script setup>
+import { computed, ref } from 'vue';
+const contador = ref(0);
+const maxContador = 50;
+const minContador = 1;
+const inputNumber = {
+  max: 100,
+  min: 1
+}
+</script>
+
+<template>
+  <main>
+
+    <input type="number" v-model="contador"/>
+    <input type="number" :value="contador"/>
+
+    <input type="number" :max="maxContador" :min="minContador"/>
+    <input type="number" v-bind="inputNumber"/>
+    <button v-on:click="console.log(`Click`)">Aperte</button>
+    <button @click="console.log(`Click`)">Aperte</button>
+  </main>
+</template>
+-->
+
+<!-- Propriedade Computed
 <script setup>
 import { computed, ref } from 'vue';
 const produtos = ref([]);
@@ -56,9 +146,7 @@ const listaProdutos = computed(() => {
     <p>Valor Total (R$): {{ valorTotal }}</p>
     <ul v-html="listaProdutos"></ul>
   </main>
-</template>
-
-
+</template> -->
 
 <!-- Funções do tipo Methods de um objeto Vue
 <script setup>
