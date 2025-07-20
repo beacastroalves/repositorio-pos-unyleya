@@ -1,20 +1,96 @@
-<!-- Funções do tipo Methods de um objeto Vue -->
 <script setup>
-import {ref} from 'vue';
+import { computed, ref } from 'vue';
+const produtos = ref([]);
+const novoProduto = {};
+const salvar = () => {
+  produtos.value.push({...novoProduto});
+};
+
+const valorTotal = computed(() => {
+  const prods = produtos.value;
+  let valorTotal = 0;
+  if (prods.length) {
+    const calcularTotalValor = (total, prod) => {
+      return total + (prod.preco * prod.quantidade);
+    };
+    valorTotal = prods.reduce(calcularTotalValor, 0);
+  }
+  return valorTotal.toFixed(2);
+});
+
+const quantItens = computed(() => {
+  const prods = produtos.value;
+  let quant = 0;
+  if (prods.length) {
+    const calcularTotalItens = (total, prod) => {
+      return total + prod.quantidade;
+    };
+    quant = prods.reduce(calcularTotalItens, 0);
+  }
+  return quant;
+});
+
+const listaProdutos = computed(() => {
+  const prods = produtos.value;
+  if (prods.length) {
+    const gerarLiProd = (prod, index) => {
+      const { nome, preco, quantidade } = prod;
+      return `<li>${index}: ${nome} R$ ${preco} (${quantidade})</li>`;
+    };
+    const liProd = prods.map(gerarLiProd);
+    const ulProd = liProd?.reduce((ul, li) => ul + li);
+    return ulProd;
+  } else {
+    return `<li>Nenhum item cadastrado.</li>`
+  }
+});
+</script>
+
+<template>
+  <main>
+    <input type="text" v-model="novoProduto.nome" />
+    <input type="number" v-model="novoProduto.preco" />
+    <input type="number" v-model="novoProduto.quantidade" />
+    <button @click="salvar">Salvar</button>
+    <p>Quantidade de Itens: {{ quantItens }}</p>
+    <p>Valor Total (R$): {{ valorTotal }}</p>
+    <ul v-html="listaProdutos"></ul>
+  </main>
+</template>
+
+
+
+<!-- Funções do tipo Methods de um objeto Vue
+<script setup>
+import { ref, computed } from 'vue';
 const produtos =ref([]);
 const produto = ref({});
 const total = ref(0.0);
 
 const salvar = () => {
   const prod = produto.value;
-  produtos.value.push(` ${prod.nome} (${prod.quantidade})\n`);
+  produtos.value.push(`${prod.nome} (${prod.quantidade})`);
   const subtotal = prod.preco * prod.quantidade;
   total.value += subtotal;
 };
+
+// computed
+const mensagem = computed(() => {
+  const quant = produtos.value.length;
+  if (quant <= 0) {
+    return `Insira um novo produto!`;
+  } else if (quant == 1) {
+    return `Ha 1 produto cadastrado.`;
+  } else {
+    return `Ha ${quant} produtos cadastrados`;
+  }
+});
+
 </script>
 
 <template>
   <main>
+    <p>{{ mensagem }}</p>
     <input type="text" v-model='produto.nome' />
     <input type="number" v-model='produto.preco' />
     <input type="number" v-model='produto.quantidade' />
@@ -22,7 +98,7 @@ const salvar = () => {
     <p>Produtos: {{ produtos.toString() }}</p>
     <p>Total: R$ {{ total.toFixed(2) }}</p>
   </main>
-</template>
+</template> -->
 
 <!-- Methods com o Options API
  <script>
