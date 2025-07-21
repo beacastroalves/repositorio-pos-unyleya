@@ -1,3 +1,76 @@
+<!-- Ciclo de vinda do objeto Vue Parte 3 Com sintaxe Option API -->
+<script>
+export default {
+  data() {
+    return {
+      dados: null
+    }
+  },
+  mounted() {
+    fetch('/data.json')
+      .then(res => res.json())
+      .then(dt => this.dados = dt);
+  }
+}
+</script>
+
+<template>
+  <main>
+    <span v-if="!dados">Carregando Dados...</span>
+    <p v-for="(item, index) in dados" :key="'item' + index">
+      {{ item.name }}
+    </p>
+  </main>
+</template>
+
+<!-- Ciclo de vinda do objeto Vue Parte 2 Com sintaxe composition API
+<script setup>
+import { ref, onMounted } from 'vue';
+const data = ref(null);
+
+onMounted(() => {
+  fetch('/data.json')
+  .then(resp => resp.json())
+  .then(dt => data.value = dt);
+});
+</script>
+
+<template>
+  <main>
+    <p v-for="(item, index) in data" :key="'item' + index">
+      {{ item.name }}
+    </p>
+  </main>
+</template>
+-->
+
+<!-- Ciclo de vinda do objeto Vue Parte 1
+// Composition API
+<script setup>
+import { onMounted } from 'vue';
+onMounted(() => {});
+</script>
+
+// OU option API
+<script>
+export default {
+  beforeCreate() { /* ... */},
+  created() { /* ... */},
+  beforeMount() { /* ... */},
+  mounted() { /* ... */},
+  beforeUpdate() { /* ... */},
+  updated() { /* ... */},
+  beforeUnmount() { /* ... */},
+  unmounted() { /* ... */},
+}
+</script>
+
+<template>
+  <main>
+  </main>
+</template>
+-->
+
 <!-- Reactive interagindo com o usuario
 <script setup>
 import { reactive } from 'vue';
