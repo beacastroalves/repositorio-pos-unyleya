@@ -1,0 +1,48 @@
+{
+  "name": "Beatriz de Castro Alves",
+  "description": "Desenvolvedor Front-end Júnior. Acredito que minha dedicação ao aprendizado contínuo, me posiciona como uma profissional dinâmica e pronta para contribuir com projetos inovadores e colaborar com pessoas que esteja com o mesmo objetivo de crescimento. Vamos nos conectar e explorar as possibilidades de sucesso que a tecnologia nos traz.",
+  "academic": [
+    {
+      "instituition": "Centro Universitário Estácio do Ceará",
+      "course": "Bacharelado em Sistemas de Informação",
+      "year": 2025
+    },
+    {
+      "instituition": "Faculdade Unyleya",
+      "course": "Pós-Graducação de Desenvolvimento Frontend (Cursando)",
+      "year": 2025
+    }
+  ],
+  "professional": [
+    {
+      "company": "Grupo Boticário",
+      "occupation": "Analista de Implantação",
+      "period": "Julho 2022 - Fevereiro 2024",
+      "jobs": "Planejamento e execução das configurações da retaguarda dos softwares Varejofácil e SysPDV para lojas do Grupo Boticário. Implementação de atividades e revisão da documentação. Repasse de informações, demandas e organização dos franqueados para o time de configuração executar as atividades e efetuar as entregas. Capacitação e acompanhamento dos analistas dentro das suas demandas. Ponte no contato direto entre o time e o franqueado. Apoio ao time de migração de dados. Identificação de inconsistências e reporte junto ao desenvolvimento para a implementação de melhorias ou correção de bugs. Trabalhar com metodologias ágil na integração de sistemas."
+    },
+    {
+      "company": "Grupo Casa Magalhães",
+      "occupation": "Analista de Implantação",
+      "period": "Maio 2021 - Junho 2022",
+      "jobs": "Planejamento e execução das configurações da retaguarda dos softwares Varejofácil e SysPDV. Identificação de inconsistências e reporte junto ao desenvolvimento para a implementação de melhorias ou correção de bugs. Capacitação dos novos analistas da equipe para entendimento das rotinas iniciais. Trabalhar com metodologias ágil na integração de sistemas."
+    },
+    {
+      "company": "Grupo Casa Magalhães",
+      "occupation": "Estagiária de Implantação de Sistemas",
+      "period": "Janeiro 2021 - Maio 2021",
+      "jobs": "Instrutora do sistema SysPDV e VarejoFacil (ERP). Identificação de inconsistências e reporte junto ao desenvolvimento para a implementação de melhorias ou correção de bugs. Parametrização, e implantação em empresas contratantes de diversos ramos, varejo, atacadista, supermercados, etc. Domínio nas rotinas do sistema como: cadastro de produtos, emissão de documentos fiscais, análise de relatórios financeiros, estoque e venda."
+    }
+  ],
+  "contacts": [
+    {
+      "type": "email",
+      "contact": "beacastro23@gmail.com",
+      "text": "E-mail"
+    },
+    {
+      "type": "link",
+      "contact": "https://www.linkedin.com/in/beatrizdecastroalves/",
+      "text": "LinkedIn"
+    }
+  ]
+}
