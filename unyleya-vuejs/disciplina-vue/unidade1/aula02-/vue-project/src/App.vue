@@ -1,4 +1,95 @@
-<!-- Ciclo de vinda do objeto Vue Parte 3 Com sintaxe Option API -->
+<!-- Falando sobre Watchers e watchEffect -->
+<script setup>
+import { ref, reactive, watchEffect } from 'vue';
+const alerta = ref(null);
+const itemEstoque = parseInt(Math.random() * 10);
+const itemCarrinho = reactive({
+  id:1,
+  nome: 'Computador',
+  quant: 0,
+});
+
+const addItem = () => { itemCarrinho.quant++; };
+const subItem = () => { itemCarrinho.quant--; };
+
+watchEffect(() => {
+  if (itemCarrinho.quant <= 0) {
+    itemCarrinho.quant = 0;
+    alerta.value = 'Deseja cancelar este item?';
+  } else if (itemCarrinho.quant > itemEstoque) {
+    itemCarrinho.quant = itemEstoque;
+    alerta.value = 'Não há mais deste item no estoque';
+  } else {
+    alerta.value = null;
+  }
+});
+</script>
+
+<template>
+  <main>
+    <p>Em estoque: {{ itemEstoque }}</p>
+    <p>{{ itemCarrinho.nome }}</p>
+    <button @click="addItem">+</button>
+    {{ itemCarrinho.quant }}
+    <button @click="subItem">-</button>
+    <p>{{ alerta }}</p>
+  </main>
+</template>
+
+<!-- Falando sobre Watchers e watchEffect
+<script setup>
+ import { ref, watch, watchEffect } from 'vue';
+ const nome = ref(null);
+ const nomeInvalido = ref(false);
+
+//  watch(nome, (newValue, oldValue) => {
+//   const rgx = /^\d.*$/;
+//   nomeInvalido.value = rgx.test(nome.value);
+//   console.log('Validando nome!');
+//  });
+
+ watchEffect(() => {
+  const rgx = /^\d.*$/;
+  nomeInvalido.value = rgx.test(nome.value);
+ });
+</script>
+
+<template>
+  <main>
+    <input v-model="nome" />
+    <div v-show="nomeInvalido">
+      Nome inválido: nao pode começar com número.
+    </div>
+  </main>
+</template>
+-->
+
+<!-- Falando sobre Watchers e Reactive
+<script setup>
+ import { reactive, ref, watch } from 'vue';
+ const nome = ref(null);
+ const usuario = reactive({});
+ const nomeInvalido = ref(false);
+
+ watch(() => usuario.nome, (newValue, oldValue) => {
+  const rgx = /^\d.*$/;
+  nomeInvalido.value = rgx.test(newValue);
+  console.log('Validando nome!');
+ });
+</script>
+
+<template>
+  <main>
+    <input v-model="usuario.nome" />
+    <input v-model="usuario.email" />
+    <div v-show="nomeInvalido">
+      Nome inválido: nao pode começar com número.
+    </div>
+  </main>
+</template>
+-->
+
+<!-- Ciclo de vinda do objeto Vue Parte 3 Com sintaxe Option API
 <script>
 export default {
   data() {
@@ -22,6 +113,7 @@ export default {
     </p>
   </main>
 </template>
+-->
 
 <!-- Ciclo de vinda do objeto Vue Parte 2 Com sintaxe composition API
 <script setup>
