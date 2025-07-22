@@ -1,5 +1,13 @@
 <script setup>
-import Sorteio from './components/Sorteio.vue';
+import { ref } from 'vue';
+import Temp from './components/Temp.vue';
+
+const min = ref(0);
+const max = ref(30);
+const atualizarPrev = () => {
+  min.value = parseInt(Math.random() * 20)
+  max.value = parseInt(Math.random() * 50)
+};
 </script>
 
 <template>
@@ -8,7 +16,8 @@ import Sorteio from './components/Sorteio.vue';
   </header>
 
   <main>
-    <Sorteio />
+    <button @click="atualizarPrev">Atualizar</button>
+    <Temp city="Rio de Janeiro" :min="min" :max="max"/>
   </main>
 </template>
 
