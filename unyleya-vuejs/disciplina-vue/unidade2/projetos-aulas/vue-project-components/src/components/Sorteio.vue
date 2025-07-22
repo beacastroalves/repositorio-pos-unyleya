@@ -13,7 +13,10 @@ const remover = () => num.value--;
     <span>{{ num }}</span>
     <button @click="remover">-</button>
   </div>
-  <NumeroAleatorio v-for="i in num" :key="`numAlt` + i"/>
+  <!-- <NumeroAleatorio v-for="i in num" :key="`numAlt` + i"/> -->
+
+  <NumeroAleatorio :minValue="0" :maxValue="100"/>
+  <NumeroAleatorio />
 </template>
 
 <style scoped>
@@ -38,5 +41,6 @@ const remover = () => num.value--;
   margin: 1px;
   flex-grow: 1;
   text-align: center;
+  align-self: center;
 }
 </style>

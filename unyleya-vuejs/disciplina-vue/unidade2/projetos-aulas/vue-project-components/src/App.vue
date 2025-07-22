@@ -1,17 +1,14 @@
 <script setup>
-import Topico from './components/Topico.vue';
-
-
+import Sorteio from './components/Sorteio.vue';
 </script>
 
 <template>
   <header>
     <h1>App</h1>
-    <Menu />
   </header>
 
   <main>
-    <Topico />
+    <Sorteio />
   </main>
 </template>
 

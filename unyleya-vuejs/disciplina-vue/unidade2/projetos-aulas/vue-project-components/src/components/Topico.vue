@@ -1,5 +1,6 @@
 <script setup>
 import { computed, reactive } from 'vue';
+import Respostas from './Respostas.vue';
 
 const topico = reactive({
   titulo: "O que é um componente Vue?",

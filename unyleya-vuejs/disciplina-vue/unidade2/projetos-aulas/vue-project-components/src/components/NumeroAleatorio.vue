@@ -1,10 +1,26 @@
 <script setup>
 import { ref } from 'vue';
+// const props = defineProps(['min', 'max'])
+const props = defineProps({
+  minValue: {
+    type: Number,
+    default: 0,
+  },
+  maxValue:  {
+    type: Number,
+    default: 9,
+  },
+})
+
+// const min = 0;
+// const max = 9;
+
+const { minValue, maxValue } = props;
 
 const numAleatorio = ref(0);
 const gerarNumAleatorio = () => {
   const numBase = Math.random();
-  const numFloat = numBase * 10;
+  const numFloat = numBase * (maxValue - minValue +  1) + minValue;
   const numInt = Math.floor(numFloat);
   numAleatorio.value = numInt;
 }
@@ -13,6 +29,7 @@ const gerarNumAleatorio = () => {
 <template>
   <section>
     <p>{{ numAleatorio }}</p>
+    <span>[{{ minValue }}, {{ maxValue }}]</span>
     <button @click="gerarNumAleatorio">Lançar</button>
   </section>
 </template>
@@ -27,6 +44,7 @@ section {
   border-bottom: 4px solid #fed766;
   border-radius: 4px;
   box-shadow: 0 0 4px lightgray;
+  min-width: 100px;
 }
 
 section > p {
@@ -37,9 +55,11 @@ section > button {
   border: none;
   background-color: #0e9aa7;
   color: white;
-  padding: 4px;
+  padding: 8px;
   border-radius: 4px;
   transition-duration: 300ms;
+  margin-top: 8px;
+  width: 100%;
 }
 
 section > button:hover {
