@@ -1,6 +1,7 @@
 <script setup>
-import Menu from './components/Menu.vue';
 import Topico from './components/Topico.vue';
+
+
 </script>
 
 <template>
