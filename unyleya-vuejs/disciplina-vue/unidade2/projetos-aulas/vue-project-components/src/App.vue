@@ -1,18 +1,6 @@
-<!-- Composition API (Modo mais usado hoje em dia) -->
- <script setup>
-import NumeroAleatorio from './components/NumeroAleatorio.vue';
+<script setup>
+import Sorteio from './components/Sorteio.vue';
 </script>
-
-<!-- Options API (Modo usado antigamente)
-<script>
-import NumeroAleatorio from './components/NumeroAleatorio.vue';
-export default {
-  components: {
-    NumeroAleatorio
-  }
-}
-</script>
--->
 
 <template>
   <header>
@@ -20,12 +8,7 @@ export default {
   </header>
 
   <main>
-    <NumeroAleatorio />
-    <NumeroAleatorio />
-    <NumeroAleatorio />
-    <NumeroAleatorio />
-    <NumeroAleatorio />
-    <NumeroAleatorio />
+    <Sorteio />
   </main>
 </template>
 
