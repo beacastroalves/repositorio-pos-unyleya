@@ -1,13 +1,19 @@
 <script setup>
-import { ref } from 'vue';
-import Temp from './components/Temp.vue';
+import { ref, reactive } from 'vue';
+import Menu from './components/Menu.vue';
+import Topico from './components/Topico.vue';
+import Respostas from './components/Respostas.vue';
 
-const min = ref(0);
-const max = ref(30);
-const atualizarPrev = () => {
-  min.value = parseInt(Math.random() * 20)
-  max.value = parseInt(Math.random() * 50)
-};
+const novaResposta = ref(null);
+const respostas = reactive([])
+
+const enviarResp = () => {
+  const conteudo = novaResposta.value;
+  const data = new Date().toLocaleString("pt-BR").substring(0, 10);
+  const autor = "Beatriz Castro";
+  novaResposta.value = null;
+  respostas.push({conteudo, data, autor});
+}
 </script>
 
 <template>
@@ -16,8 +22,14 @@ const atualizarPrev = () => {
   </header>
 
   <main>
-    <button @click="atualizarPrev">Atualizar</button>
-    <Temp city="Rio de Janeiro" :min="min" :max="max"/>
+    <Topico />
+    <section>
+      <Respostas :respostas="respostas"/>
+      <div class="resposta__form">
+        <textarea v-model="novaResposta"></textarea>
+        <button @click="enviarResp">Enviar</button>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -29,6 +41,16 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+.resposta__form {
+  border-top: 1px solid lightgray;
+  padding: 10px;
+  display: flex;
+}
+
+.resposta__form > textarea {
+  flex-grow: 1;
 }
 
 @media (min-width: 1024px) {
