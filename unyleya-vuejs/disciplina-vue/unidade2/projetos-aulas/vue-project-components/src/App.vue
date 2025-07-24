@@ -10,20 +10,8 @@ import LayoutPage from './components/LayoutPage.vue';
   </header>
 
   <main>
-    <LayoutPage>
-      <template v-slot:header>
-        <h1>Cabeçalho</h1>
-      </template>
-
-      <!-- Colocar Default ou apenas colocar qualquer conteudo fora do template vai para o espaço do slot que nao possui nome -->
-      <!-- <template #default>
-        <h2>Conteudo Principal</h2>
-      </template> -->
-
-      <!-- Pode existir valor/conteudo dentro dos templates la nos slots, vai ser um valor padrao, e aqui se for colocado vai ser sobreescrever -->
-      <!-- <template v-slot:footer>
-        <p>Rodape</p>
-      </template> -->
+    <LayoutPage v-slot="props">
+      <h2>Lista de {{ props.pag }}</h2>
     </LayoutPage>
   </main>
 </template>
