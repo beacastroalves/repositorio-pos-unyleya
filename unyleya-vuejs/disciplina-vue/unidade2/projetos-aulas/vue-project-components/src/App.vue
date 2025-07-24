@@ -1,22 +1,8 @@
 <script setup>
-import Menu from './components/Menu.vue';
-import Topico from './components/Topico.vue';
-import Respostas from './components/Respostas.vue';
-import FormResposta from './components/FormResposta.vue';
-import { reactive, provide } from 'vue';
+import { reactive } from 'vue';
+import FormField from './components/FormField.vue';
 
-const respostas = reactive([]);
-const usuario = reactive({
-  nome: "Beatriz Alves",
-  img: "./src/assets/user.png",
-  descriptionImg: "icone de um ususario padrao"
-});
-
-provide("usuario", usuario);
-
-const addResposta = (resposta) => {
-  respostas.push(resposta);
-}
+const usuario = reactive({})
 </script>
 
 <template>
@@ -25,11 +11,11 @@ const addResposta = (resposta) => {
   </header>
 
   <main>
-    <Topico />
-    <section>
-      <Respostas :respostas="respostas"/>
-      <FormResposta @eventAddResposta='addResposta' />
-    </section>
+    <FormField v-model="usuario.nome" label="Nome" type="text" ph="Nome" />
+    <FormField v-model="usuario.email" label="Email" type="text" ph="Email" />
+    <FormField v-model="usuario.senha" label="Senha" type="password" ph="Senha" />
+    <FormField v-model="usuario.idade" label="Idade" type="number" ph="Idade" />
+    <pre>{{ usuario }}</pre>
   </main>
 </template>
 
