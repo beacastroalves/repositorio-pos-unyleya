@@ -1,8 +1,19 @@
 <script setup>
-import { reactive } from 'vue';
-import FormField from './components/FormField.vue';
+import Galeria from './components/Galeria.vue';
 
-const usuario = reactive({})
+// const produtos = [
+//   { nome: "Computador", descricao: "Computador Gamer", preco: 9_000.00 },
+//   { nome: "Mouse", descricao: "Mouse Gamer", preco: 90.00 },
+//   { nome: "Teclado", descricao: "Teclado Gamer", preco: 180.00 },
+//   { nome: "Monitor", descricao: "Monitor Gamer", preco: 1_000.00 },
+// ]
+
+const eventos = [
+  { nome: "Musica", descricao: "Musicas de Sucesso", data: "05/01/2026", local: "Casa de Eventos" },
+  { nome: "Cinema", descricao: "Cinema de Sucesso", data: "02/01/2026", local: "Cinema Local" },
+  { nome: "Teatro", descricao: "Teatro de Sucesso", data: "08/01/2026", local: "Teatro Municipal" },
+  { nome: "Orquestra", descricao: "Orquestra de Sucesso", data: "21/01/2026", local: "Praça da Cidade" },
+]
 </script>
 
 <template>
@@ -11,11 +22,8 @@ const usuario = reactive({})
   </header>
 
   <main>
-    <FormField v-model="usuario.nome" label="Nome" type="text" ph="Nome" />
-    <FormField v-model="usuario.email" label="Email" type="text" ph="Email" />
-    <FormField v-model="usuario.senha" label="Senha" type="password" ph="Senha" />
-    <FormField v-model="usuario.idade" label="Idade" type="number" ph="Idade" />
-    <pre>{{ usuario }}</pre>
+    <!-- <Galeria titulo="Produtos" descricao="Produtos Eletronicos" :itens="produtos" /> -->
+    <Galeria titulo="Eventos" descricao="Eventos na Cidade" :itens="eventos" />
   </main>
 </template>
 
