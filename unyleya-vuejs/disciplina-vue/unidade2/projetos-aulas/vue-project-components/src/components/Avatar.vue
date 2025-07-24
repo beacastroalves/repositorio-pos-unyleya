@@ -1,5 +1,10 @@
 <script setup>
-const { usuario } = defineProps(['usuario'])
+import { inject } from 'vue';
+
+// const { usuario } = defineProps(['usuario'])
+
+const usuario = inject("usuario");
+
 </script>
 
 <template>

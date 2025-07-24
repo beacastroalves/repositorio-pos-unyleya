@@ -3,14 +3,16 @@ import Menu from './components/Menu.vue';
 import Topico from './components/Topico.vue';
 import Respostas from './components/Respostas.vue';
 import FormResposta from './components/FormResposta.vue';
-import { reactive } from 'vue';
+import { reactive, provide } from 'vue';
 
 const respostas = reactive([]);
 const usuario = reactive({
   nome: "Beatriz Alves",
   img: "./src/assets/user.png",
   descriptionImg: "icone de um ususario padrao"
-})
+});
+
+provide("usuario", usuario);
 
 const addResposta = (resposta) => {
   respostas.push(resposta);
@@ -26,7 +28,7 @@ const addResposta = (resposta) => {
     <Topico />
     <section>
       <Respostas :respostas="respostas"/>
-      <FormResposta :usuario="usuario" @eventAddResposta='addResposta' />
+      <FormResposta @eventAddResposta='addResposta' />
     </section>
   </main>
 </template>
