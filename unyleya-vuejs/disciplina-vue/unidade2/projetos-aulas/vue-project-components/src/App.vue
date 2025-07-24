@@ -5,7 +5,12 @@ import Respostas from './components/Respostas.vue';
 import FormResposta from './components/FormResposta.vue';
 import { reactive } from 'vue';
 
-const respostas = reactive([])
+const respostas = reactive([]);
+const usuario = reactive({
+  nome: "Beatriz Alves",
+  img: "./src/assets/user.png",
+  descriptionImg: "icone de um ususario padrao"
+})
 
 const addResposta = (resposta) => {
   respostas.push(resposta);
@@ -21,7 +26,7 @@ const addResposta = (resposta) => {
     <Topico />
     <section>
       <Respostas :respostas="respostas"/>
-      <FormResposta @eventAddResposta='addResposta' />
+      <FormResposta :usuario="usuario" @eventAddResposta='addResposta' />
     </section>
   </main>
 </template>

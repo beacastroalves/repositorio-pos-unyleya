@@ -1,6 +1,8 @@
 <script setup>
 import { ref, reactive } from 'vue';
+import Avatar from './Avatar.vue';
 
+const { usuario } = defineProps(['usuario']);
 const emit = defineEmits(['eventAddResposta']);
 const novaResposta = ref(null);
 
@@ -16,6 +18,7 @@ const enviarResp = () => {
 
 <template>
   <main>
+      <Avatar :usuario="usuario"/>
       <div class="resposta__form">
         <textarea v-model="novaResposta"></textarea>
         <button @click='enviarResp'>Enviar</button>
