@@ -6,9 +6,9 @@ import DadosPessoais from './components/forms/DadosPessoais.vue';
 
 const abaCorrente = ref(0);
 const abas = [
-  'Pessoais',
-  'Endereço',
-  'Experiências',
+  { label: 'Pessoais', comp: DadosPessoais },
+  { label: 'Endereço', comp: DadosEndereco },
+  { label: 'Experiências', comp: DadosExperiencias },
 ]
 </script>
 
@@ -20,18 +20,17 @@ const abas = [
   <main>
     <div>
       <button
-        v-for="(aba, idx) in abas"
-        :key="`aba` + idx"
+        v-for="(aba, idx) in abas" :key="`aba` + idx"
         @click="abaCorrente = idx"
         >
-         {{ aba }}
+         {{ aba.label }}
       </button>
       <br>
       <hr>
       <div>
-        <DadosPessoais v-show="abaCorrente === 0" />
-        <DadosEndereco v-show="abaCorrente === 1" />
-        <DadosExperiencias v-show="abaCorrente === 2" />
+        <KeepAlive>
+          <component :is="abas[abaCorrente].comp" />
+        </KeepAlive>
       </div>
     </div>
   </main>
