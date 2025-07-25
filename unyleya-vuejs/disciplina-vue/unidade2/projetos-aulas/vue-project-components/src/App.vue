@@ -1,7 +1,15 @@
 <script setup>
-import LayoutPage from './components/LayoutPage.vue';
+import { ref } from 'vue';
+import DadosEndereco from './components/forms/DadosEndereco.vue';
+import DadosExperiencias from './components/forms/DadosExperiencias.vue';
+import DadosPessoais from './components/forms/DadosPessoais.vue';
 
-
+const abaCorrente = ref(0);
+const abas = [
+  'Pessoais',
+  'Endereço',
+  'Experiências',
+]
 </script>
 
 <template>
@@ -10,9 +18,22 @@ import LayoutPage from './components/LayoutPage.vue';
   </header>
 
   <main>
-    <LayoutPage v-slot="props">
-      <h2>Lista de {{ props.pag }}</h2>
-    </LayoutPage>
+    <div>
+      <button
+        v-for="(aba, idx) in abas"
+        :key="`aba` + idx"
+        @click="abaCorrente = idx"
+        >
+         {{ aba }}
+      </button>
+      <br>
+      <hr>
+      <div>
+        <DadosPessoais v-show="abaCorrente === 0" />
+        <DadosEndereco v-show="abaCorrente === 1" />
+        <DadosExperiencias v-show="abaCorrente === 2" />
+      </div>
+    </div>
   </main>
 </template>
 
@@ -24,6 +45,11 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
