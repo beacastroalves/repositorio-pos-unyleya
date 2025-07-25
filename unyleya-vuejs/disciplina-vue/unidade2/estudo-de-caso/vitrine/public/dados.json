@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "name": "Guitarra Acústica Fender",
+    "description": "Guitarra acústica de seis cordas, ideal para iniciantes e músicos experientes. Som rico e ressonante.",
+    "price": 350.00,
+    "available": 12
+  },
+  {
+    "id": "2",
+    "name": "Teclado MIDI Akai MPK Mini",
+    "description": "Controlador MIDI compacto com 25 teclas, pads sensíveis à velocidade e knobs programáveis.",
+    "price": 120.00,
+    "available": 25
+  },
+  {
+    "id": "3",
+    "name": "Microfone Condensador Rode NT1",
+    "description": "Microfone de estúdio de alta qualidade, perfeito para vocais e instrumentos acústicos. Baixo ruído.",
+    "price": 280.00,
+    "available": 8
+  },
+  {
+    "id": "4",
+    "name": "Fones de Ouvido Sennheiser HD 280 Pro",
+    "description": "Fones de ouvido de monitoramento profissional, com excelente isolamento de ruído e resposta de frequência precisa.",
+    "price": 100.00,
+    "available": 30
+  },
+  {
+    "id": "5",
+    "name": "Interface de Áudio Focusrite Scarlett 2i2",
+    "description": "Interface de áudio USB com duas entradas e duas saídas, ideal para gravação em casa.",
+    "price": 160.00,
+    "available": 15
+  },
+  {
+    "id": "6",
+    "name": "Violino Stentor Student I",
+    "description": "Violino tamanho 4/4, perfeito para estudantes. Inclui arco, estojo e resina.",
+    "price": 200.00,
+    "available": 7
+  },
+  {
+    "id": "7",
+    "name": "Bateria Eletrônica Alesis Nitro Mesh Kit",
+    "description": "Bateria eletrônica com pads de mesh que oferecem uma experiência de toque realista. Sons versáteis.",
+    "price": 450.00,
+    "available": 5
+  },
+  {
+    "id": "8",
+    "name": "Pedal de Guitarra Boss DS-1 Distortion",
+    "description": "Pedal de distorção clássico da Boss, conhecido por seu som potente e versátil.",
+    "price": 70.00,
+    "available": 18
+  },
+  {
+    "id": "9",
+    "name": "Controlador DJ Pioneer DDJ-400",
+    "description": "Controlador DJ de 2 canais com layout profissional, perfeito para iniciantes e DJs que tocam em casa.",
+    "price": 270.00,
+    "available": 10
+  },
+  {
+    "id": "10",
+    "name": "Amplificador de Guitarra Roland Cube Street EX",
+    "description": "Amplificador portátil de guitarra com alta potência e diversos efeitos, ideal para performances de rua.",
+    "price": 400.00,
+    "available": 4
+  },
+  {
+    "id": "11",
+    "name": "Flauta Transversal Yamaha YFL-212",
+    "description": "Flauta transversal para estudantes, com ótima sonoridade e fácil de tocar.",
+    "price": 320.00,
+    "available": 6
+  },
+  {
+    "id": "12",
+    "name": "Cavaquinho Rozini RC09.ATN",
+    "description": "Cavaquinho acústico com tampo em pinho e lateral/fundo em jacarandá. Som brilhante.",
+    "price": 180.00,
+    "available": 9
+  },
+  {
+    "id": "13",
+    "name": "Ukulele Concert Kala KA-C",
+    "description": "Ukulele concert de mogno com som quente e encorpado, perfeito para iniciantes.",
+    "price": 90.00,
+    "available": 22
+  },
+  {
+    "id": "14",
+    "name": "Metrônomo Digital Korg MA-2",
+    "description": "Metrônomo digital compacto com ampla faixa de tempo e modos de ritmo variados.",
+    "price": 25.00,
+    "available": 40
+  },
+  {
+    "id": "15",
+    "name": "Suporte para Partitura Hercules BS118BB",
+    "description": "Suporte de partitura dobrável e resistente, ideal para músicos em movimento.",
+    "price": 35.00,
+    "available": 35
+  }
+]
