@@ -1,14 +1,16 @@
 <script setup>
 import { ref } from 'vue';
-import DadosEndereco from './components/forms/DadosEndereco.vue';
-import DadosExperiencias from './components/forms/DadosExperiencias.vue';
-import DadosPessoais from './components/forms/DadosPessoais.vue';
+import Contatos from './pages/Contatos.vue';
+import Home from './pages/Home.vue';
+import Produtos from './pages/Produtos.vue';
+import Servicos from './pages/Servicos.vue';
 
-const abaCorrente = ref(0);
-const abas = [
-  { label: 'Pessoais', comp: DadosPessoais },
-  { label: 'Endereço', comp: DadosEndereco },
-  { label: 'Experiências', comp: DadosExperiencias },
+const pagina = ref(0);
+const paginas = [
+  { label: 'Home', comp: Home },
+  { label: 'Produtos', comp: Produtos },
+  { label: 'Serviços', comp: Servicos },
+  { label: 'Contatos', comp: Contatos },
 ]
 </script>
 
@@ -19,19 +21,16 @@ const abas = [
 
   <main>
     <div>
-      <button
-        v-for="(aba, idx) in abas" :key="`aba` + idx"
-        @click="abaCorrente = idx"
+      <a
+        v-for="(aba, idx) in paginas"
+        :key="`aba` + idx"
+        @click="pagina = idx"
         >
-         {{ aba.label }}
-      </button>
-      <br>
-      <hr>
-      <div>
-        <KeepAlive>
-          <component :is="abas[abaCorrente].comp" />
-        </KeepAlive>
-      </div>
+          {{ aba.label }}
+      </a>
+    </div>
+    <div>
+      <component :is="paginas[pagina].comp" />
     </div>
   </main>
 </template>
@@ -46,9 +45,12 @@ header {
   margin: 0 auto 2rem;
 }
 
-button {
+a {
+  margin: 8px;
   padding: 8px;
   cursor: pointer;
+
+  user-select: none;
 }
 
 @media (min-width: 1024px) {
