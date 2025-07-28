@@ -1,0 +1,70 @@
+{
+  "city": "Barcelos",
+  "description": "Barcelos é uma cidade histórica no norte de Portugal, famosa pelo seu Galo, artesanato e a sua grandiosa feira semanal. Rica em cultura, tradições e lendas, é um local encantador para visitar e explorar a autenticidade minhota.",
+  "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nacionalidadeportuguesa.com.br%2Fwp-content%2Fuploads%2F2021%2F04%2Fbarcelos-em-portugal-2.jpg&f=1&nofb=1&ipt=8377a5f83be177283f7684a554886407957b3c2eeea82c453cf7ba14bfd2e757",
+  "pointsOfInterest": [
+    {
+      "id": "1",
+      "name": "Museu da Olaria",
+      "category": "Museus e Cultura",
+      "description": "Dedicado à rica tradição da olaria de Barcelos, com peças de cerâmica de diversas épocas e estilos.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cm-barcelos.pt%2Fwp-content%2Fuploads%2F2018%2F12%2FMuseu-de-Olaria-1024x683.jpg&f=1&nofb=1&ipt=e95efe8a51586c8d8b0bc247966be8ebb0b9f84ac6cf87c7c2d75687c104650b"
+      },
+    {
+      "id": "2",
+      "name": "Templo do Bom Jesus da Cruz",
+      "category": "Locais Religiosos",
+      "description": "Igreja barroca imponente, conhecida pela sua cúpula e pela lenda do Galo de Barcelos, um símbolo nacional de Portugal.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cm-barcelos.pt%2Fwp-content%2Fuploads%2F2018%2F12%2FSenhor-da-Cruz-1024x683.jpg&f=1&nofb=1&ipt=37325f05be36386885032710b81af47f21ff81a0b74fb4e85fc24407598238da"
+    },
+    {
+      "id": "3",
+      "name": "Paço dos Condes de Barcelos (Ruínas)",
+      "category": "Monumentos Históricos",
+      "description": "Ruínas do antigo palácio dos Condes de Barcelos, com vista para o rio Cávado, onde se encontra o cruzeiro do Senhor do Galo.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F2420%2F2381464992_c4cf715f12_b.jpg&f=1&nofb=1&ipt=45ef51f23d5e218048cbfd5f931e7bf339b7f9064b88975cf1107187ea54c81e"
+    },
+    {
+      "id": "4",
+      "name": "Museu Arqueológico de Barcelos",
+      "category": "Museus e Cultura",
+      "description": "Instalado nas ruínas do Paço dos Condes, exibe achados arqueológicos da região, contando a história local.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.portugaldenorteasul.pt%2Fuploads%2F20190710014501_MuseuBarcelos.jpg&f=1&nofb=1&ipt=f4e44e93e258cb4f30dd79ac83f191628d1c36ac4e891dd2b3ac6140e617b1ae"
+    },
+    {
+      "id": "5",
+      "name": "Feira de Barcelos",
+      "category": "Mercados e Tradições",
+      "description": "Uma das maiores e mais antigas feiras semanais de Portugal, acontece às quintas-feiras, com artesanato, produtos locais e gastronomia.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Frebbix%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Ffl_progressive.force_strip%2Cw_970%2Fulvoxotwbnmdqhvdcoms&f=1&nofb=1&ipt=cc11b878af8fe6c172f3982d9c36203ee0178f639dd0eaaeb7ae35d72f18812b"
+    },
+    {
+      "id": "6",
+      "name": "Ponte Medieval de Barcelos",
+      "category": "Monumentos Históricos",
+      "description": "Ponte histórica sobre o rio Cávado, um dos ex-libris da cidade, com uma bela vista para o centro histórico.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcms.infoportugal.info%2Fmedia%2Ffotos%2Ffinal%2FBarcelos%2FBAR1563.jpg&f=1&nofb=1&ipt=af9f3d9fd1d4892948c44f534e0db5d9b7422f1137715dcf63cbf688ce945255"
+    },
+    {
+      "id": "7",
+      "name": "Jardim das Barrocas",
+      "category": "Parques e Jardins",
+      "description": "Um belo jardim com estátuas e fontes, ideal para um passeio relaxante e desfrutar da natureza.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.impulsiveaddiction.com%2Fwp-content%2Fuploads%2F2021%2F09%2Fjardim-das-barrocas-e-passeio-dos-assentos-3.jpg&f=1&nofb=1&ipt=e2fb06651cb0b2664a73c3115ab764d0180883d6b1cd53df51958d702112ac07"
+    },
+    {
+      "id": "8",
+      "name": "Centro de Artesanato de Barcelos",
+      "category": "Cultura e Artesanato",
+      "description": "Local para conhecer e adquirir o famoso artesanato de Barcelos, incluindo o Galo de Barcelos em diversas formas.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.e-cultura.pt%2Fimages%2Fuser%2Fimage15779701528680.jpg&f=1&nofb=1&ipt=2139025773214a8efd2ee9bf975d23f8f57134a969ef7a215d36c4a10ffa743e"
+    },
+    {
+      "id": "9",
+      "name": "Torre do Cimo da Vila",
+      "category": "Monumentos Históricos",
+      "description": "Antiga torre medieval, parte das muralhas da cidade, oferece vistas panorâmicas sobre Barcelos e o rio Cávado.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblogger.googleusercontent.com%2Fimg%2Fb%2FR29vZ2xl%2FAVvXsEiQ8xkCHIT8Pei-sO9eHLWRnCZz341McSNT3xWi5giKXOl-10rzmyxvEO5M2B0d3yphE1_EXXDL_hu71nJOHmfx9OkGTybMjENdR4Ifq3Mt-5FOybTqpBGU8o9C4_6rbbQlHanU4IYThKb0l_ClFkXJwHBwVEsg_6IrJ29a8a6UrVP9vjbVRJAriPFzwA%2Fs2048%2F290005783_5392771777412799_282009051697641625_n.jpg&f=1&nofb=1&ipt=19ccf82b2d5859f0dacd41fd6561c941c15313b923b6c2ec8b9ecdfb83983b2b"
+    }
+  ]
+}
