@@ -3,19 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Criação de Aplicações Web com Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue-router@4.0.15"></script>
+  <title>Document</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="./index.html">Início</a>
-      <a href="./produtos.html">Produtos</a>
-      <a href="./carrinho.html">Carrinho</a>
-      <a href="./perfil.html">Perfil</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Minha Loja</h1>
-  </main>
+  <div id="app">
+    <router-link to='/'>Início</router-link>
+    <router-link to='/produtos'>Produtos</router-link>
+    <router-link to='/carrinho'>Carrinho</router-link>
+    <router-link to='/perfil'>Perfil</router-link>
+
+    <router-view></router-view>
+  </div>
+
+  <script>
+    const Home = { template: '<div>Início</div>' }
+    const Produtos = { template: '<div>Produtos</div>' }
+    const Carrinho = { template: '<div>Carrinho</div>' }
+    const Perfil = { template: '<div>Perfil</div>' }
+
+    const routes = [
+      { path: '/', component: Home },
+      { path: '/produtos', component: Produtos },
+      { path: '/carrinho', component: Carrinho },
+      { path: '/perfil', component: Perfil },
+    ];
+
+    const router = VueRouter.createRouter({
+      history: VueRouter.createWebHashHistory(),
+      routes,
+    });
+
+    const app = Vue.createApp({});
+    app.use(router);
+    app.mount('#app');
+  </script>
 </body>
 </html>
