@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criação de Aplicações Web com Vue</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a onclick="navegar(0)">Início</a>
+      <a onclick="navegar(1)">Produtos</a>
+      <a onclick="navegar(2)">Carrinho</a>
+      <a onclick="navegar(3)">Perfil</a>
+    </nav>
+  </header>
+  <main id="content"></main>
+
+  <script src="index.js"></script>
+  <script src="produtos.js"></script>
+  <script src="carrinho.js"></script>
+  <script src="perfil.js"></script>
+
+  <script>
+    const paginas = [
+      indexPageTemplate,
+      produtosPageTemplate,
+      carrinhoPageTemplate,
+      perfilPageTemplate
+    ];
+    
+    function navegar(pagina) {
+      content.innerHTML = paginas[pagina];
+    };
+  </script>
+</body>
+</html>

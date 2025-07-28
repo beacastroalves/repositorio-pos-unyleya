@@ -1,0 +1,1 @@
+const indexPageTemplate = `<h1>Minha Loja</h1>`;
