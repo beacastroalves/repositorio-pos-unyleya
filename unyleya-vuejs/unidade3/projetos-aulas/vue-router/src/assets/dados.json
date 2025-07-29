@@ -1,0 +1,8 @@
+[
+  { "id": 1, "nome": "Tabuleiro dama", "preco": 14.99, "desconto": 0 },
+  { "id": 2, "nome": "Tabuleiro xadrez", "preco": 84.99, "desconto": 0.1 },
+  { "id": 3, "nome": "Uno flip", "preco": 44.99, "desconto": 0.05 },
+  { "id": 4, "nome": "Kit completo Poker", "preco": 99.99, "desconto": 0 },
+  { "id": 5, "nome": "Imagem e Ação", "preco": 129.99, "desconto": 0.09 },
+  { "id": 6, "nome": "Cara a cara", "preco": 89.99, "desconto": 0 }
+]
