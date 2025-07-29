@@ -1,7 +1,8 @@
 <script setup>
 const menu = [
   { rota: '/', rotulo: 'Início' },
-  { rota: '/produto', rotulo: 'Produtos' }
+  { rota: '/produto', rotulo: 'Produtos' },
+  { rota: '/clientes', rotulo: 'Clientes' }
 ];
 </script>
 

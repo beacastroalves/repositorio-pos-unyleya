@@ -1,12 +1,13 @@
 <script setup>
 import { computed, ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const produtos = ref([]);
 const mensagem = ref(null);
 
 fetch('/src/assets/dados.json')
   .then(res => res.json())
-  .then(prods => produtos.value = prods)
+  .then(dados => produtos.value = dados.produtos)
   .catch(err => mensagem.value = err + `Erro aqui`)
 
 const prodPromocao = computed(() => {
@@ -26,6 +27,7 @@ const prodPromocao = computed(() => {
         <h3>{{ prod.nome }}</h3>
         <p class="desc">R$ {{ prod.preco.toFixed(2) }}</p>
         <p>R$ {{ (prod.preco * (1 - prod.desconto)).toFixed(2) }}</p>
+        <RouterLink :to="`/produto/` + prod.id">Detalhes</RouterLink>
   </div>
 </template>
 

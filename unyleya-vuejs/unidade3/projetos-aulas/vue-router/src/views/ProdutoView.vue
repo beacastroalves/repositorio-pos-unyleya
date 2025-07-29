@@ -12,13 +12,13 @@ const mensagem = ref(null);
 
 fetch('../src/assets/dados.json')
   .then(res => res.json())
-  .then(prods => {
-    prod.value = prods.filter(prod => prod.id === +prodId)[0];
+  .then(dados => {
+    prod.value = dados.produtos.filter(prod => prod.id === +prodId)[0];
   })
   .catch(err => mensagem.value = err)
 
 const desconto = computed(() => prod.value.desconto * 100);
-const precoFinal = computed(() => (prod.preco * (1 - prod.desconto)));
+const precoFinal = computed(() => (prod.value.preco * (1 - prod.value.desconto)));
 const precoTotal = computed(() => precoFinal.value * quant.value);
 </script>
 
