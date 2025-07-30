@@ -14,21 +14,28 @@ const prodPromocao = computed(() => {
   const prods = produtos.value;
   return prods.filter(prod => prod.desconto > 0);
 });
+
+const formatDesconto = (prod) => `R$ ${(prod?.preco * (1 - prod?.desconto)).toFixed(2)}`;
+
+const formtPreco = (prod) => `R$ ${prod?.preco.toFixed(2)}`;
 </script>
 
 <template>
   <h1>Dashboard</h1>
   {{ mensagem }}
-  <div
-      class="card"
-      v-for="(prod, index) in prodPromocao"
-      :key="`prod_promo_` + index"
-      >
-        <h3>{{ prod.nome }}</h3>
-        <p class="desc">R$ {{ prod.preco.toFixed(2) }}</p>
-        <p>R$ {{ (prod.preco * (1 - prod.desconto)).toFixed(2) }}</p>
-        <RouterLink :to="`/produto/` + prod.id">Detalhes</RouterLink>
-  </div>
+  <RouterLink
+    v-for="(prod, index) in prodPromocao"
+    :key="`prod_promo_` + index"
+    :to="`/produto/` + prod?.id"
+    >
+    <div
+        class="card"
+        >
+          <h3>{{ prod.nome }}</h3>
+          <p class="desc">R$ {{ formtPreco(prod) }}</p>
+          <p>R$ {{ formatDesconto(prod) }}</p>
+    </div>
+  </RouterLink>
 </template>
 
 <style scoped>
@@ -36,9 +43,11 @@ const prodPromocao = computed(() => {
   cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  margin: 16px;
-  padding: 16px;
   border: 1px solid lightgray;
+  margin: 8px;
+  padding: 16px;
+  min-width: 170px;
+  transition-duration: 0.5s;
 }
 
 .card .desc {
@@ -47,6 +56,10 @@ const prodPromocao = computed(() => {
 }
 
 .card:hover {
-  background-color: #5c562c;
+  background-color: #204521;
+}
+
+h1 {
+  margin-left: 1rem;
 }
 </style>

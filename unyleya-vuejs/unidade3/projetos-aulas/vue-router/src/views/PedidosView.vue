@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 
 
 const route = useRoute();
-const clienteId = route.params.id;
+const clienteId = +route.params.id;
 
 const cliente = ref(null)
 const pedidos = ref([]);
@@ -16,10 +16,10 @@ fetch('/src/assets/dados.json')
     const pds = dados.pedidos;
     const clts = dados.clientes;
     cliente.value = clts.filter(cliente => {
-      return cliente.id === +clienteId
+      return cliente.id === clienteId
     })[0]
     pedidos.value = pds
-      .filter(pedido => pedido.clienteId === +clienteId);
+      .filter(pedido => pedido.clienteId === clienteId);
   })
   .catch(err => mensagem.value = err);
 

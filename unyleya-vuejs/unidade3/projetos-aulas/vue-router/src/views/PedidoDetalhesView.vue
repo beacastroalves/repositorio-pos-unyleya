@@ -5,8 +5,8 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
-const clienteId = route.params.clId;
-const pedidoId = route.params.pdId;
+const clienteId = +route.params.clId;
+const pedidoId = +route.params.pdId;
 
 const cliente = ref(null);
 const mensagem = ref(null);
@@ -15,7 +15,7 @@ fetch('/src/assets/dados.json')
   .then(res => res.json())
   .then(dados => {
     const clts = dados.clientes
-    cliente.value = clts.filter(c => c.id === +clienteId)[0]
+    cliente.value = clts.filter(c => c.id === clienteId)[0]
   })
   .catch(err => mensagem.value = err);
 </script>

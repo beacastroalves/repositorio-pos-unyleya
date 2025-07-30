@@ -9,7 +9,11 @@ const router = createRouter({
       component: DashboardView,
     },
     {
-      path: '/produto/:id',
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/NotFound.vue'),
+    },
+    {
+      path: '/produto/:id(\\d+)',
       component: () => import('../views/ProdutoView.vue'),
     },
     {
@@ -23,7 +27,11 @@ const router = createRouter({
     {
       path: '/clientes/:clId/pedidos/:pdId',
       component: () => import('../views/PedidoDetalhesView.vue')
-    }
+    },
+    {
+      path: '/produto',
+      component: () => import('../views/ProdutosView.vue')
+    },
   ],
 })
 

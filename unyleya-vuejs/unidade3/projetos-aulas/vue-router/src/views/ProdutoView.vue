@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-const prodId = route.params.id;
+const prodId = +route.params.id;
 
 
 const prod = ref(null);
@@ -13,7 +13,7 @@ const mensagem = ref(null);
 fetch('../src/assets/dados.json')
   .then(res => res.json())
   .then(dados => {
-    prod.value = dados.produtos.filter(prod => prod.id === +prodId)[0];
+    prod.value = dados.produtos.filter(prod => prod.id === prodId)[0];
   })
   .catch(err => mensagem.value = err)
 
