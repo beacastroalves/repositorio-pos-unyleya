@@ -25,5 +25,23 @@
         4
       ]
     }
+  ],
+  "avaliacoes": [
+    {
+      "id": 1,
+      "produtoId": 1,
+      "clienteId": 2,
+      "nota": 4,
+      "observacao": "Muito bom, so faltou ser melhor."
+    }
+  ],
+  "questoes": [
+    {
+      "id": 1,
+      "produtoId": 1,
+      "clienteId": 2,
+      "pergunta": "Tem quais opcoes de cores?",
+      "resposta": "Tem azul, amarelo e vermelho."
+    }
   ]
 }

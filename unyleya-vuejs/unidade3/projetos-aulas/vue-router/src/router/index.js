@@ -16,6 +16,26 @@ const router = createRouter({
       path: '/produto/:id(\\d+)',
       component: () => import('../views/ProdutoView.vue'),
       props: true,
+      children: [
+        {
+          path: "",
+          name: "detalhes",
+          component: () => import("../components/Detalhes.vue"),
+          props: true
+        },
+        {
+          path: "avaliacoes",
+          name: "avaliacoes",
+          component: () => import("../components/Avaliacoes.vue"),
+          props: true,
+        },
+        {
+          path: "questoes",
+          name: "questoes",
+          component: () => import("../components/Questoes.vue"),
+          props: true
+        },
+      ],
     },
     {
       path: '/clientes',
