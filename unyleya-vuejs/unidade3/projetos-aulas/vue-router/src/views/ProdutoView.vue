@@ -1,8 +1,9 @@
 <script setup>
-import { computed, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { computed, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 const prodId = +route.params.id;
 
 
@@ -17,15 +18,27 @@ fetch('../src/assets/dados.json')
   })
   .catch(err => mensagem.value = err)
 
-const desconto = computed(() => prod.value.desconto * 100);
-const precoFinal = computed(() => (prod.value.preco * (1 - prod.value.desconto)));
+const desconto = computed(() => prod.value?.desconto * 100);
+const precoFinal = computed(() => (prod.value?.preco * (1 - prod.value?.desconto)));
 const precoTotal = computed(() => precoFinal.value * quant.value);
+
+watch(prod, (newProd) => {
+  if(!newProd) {
+    mensagem.value = 'ID não encontrado.'
+    setTimeout(() => {
+      router.push({
+        path: '/produto'
+      })
+      // router.replace({ path: '/produto' })
+    }, 3000)
+  }
+})
 </script>
 
 <template>
   {{ mensagem }}
-  <h2>#{{ prod.id }} {{ prod.nome }}</h2>
-  <p>Preço: R$ {{ prod.preco.toFixed(2) }}</p>
+  <h2>#{{ prod?.id }} {{ prod?.nome }}</h2>
+  <p>Preço: R$ {{ prod?.preco.toFixed(2) }}</p>
   <p>Desconto: {{ desconto }}</p>
   <p>Preço Final: R$ {{ precoFinal.toFixed(2) }}</p>
   <div>
