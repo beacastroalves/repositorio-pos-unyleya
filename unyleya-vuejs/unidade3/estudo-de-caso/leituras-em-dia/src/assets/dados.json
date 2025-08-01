@@ -1,0 +1,605 @@
+{
+  "livros": [
+    {
+      "id": 1,
+      "titulo": "Até o Último Floco de Neve (Nicola & Aster)",
+      "autor": "L.S Englantine",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 499,
+      "resumo": "O mundo já não é mais o mesmo desde que Nicola Wolf se apaixonou desenfreadamente por Aster Campbell – muito menos elas. Trabalhando em uma biblioteca pública no centro da cidade, Nicola investe seu tempo como social mídia do lugar, gerenciando a entrada e a saída de títulos monumentais e instigantes. Aster sabe que a vida caótica que escolheu é realmente satisfatória, além de enfermeira, está treinando o mais novo time juvenil de um bairro no centro de Brighton. O que mais ela poderia querer? Se não falta nada em uma vida tão bela e colorida, por que não a transformar em uma harmonia festiva ao pensar em... um compromisso? “Até o Último Floco de Neve” traz uma revigorante espiada no futuro de duas determinadas garotas que saíram de Salt para trilharem seus próprios caminhos ao redor do mundo.",
+      "numero_paginas": 136,
+      "idioma": "Português",
+      "data_publicacao": "11 outubro 2022",
+      "serie": "Nicola & Aster"
+    },
+    {
+      "id": 2,
+      "titulo": "O Medo é Feito de Gelo (Nicola & Aster)",
+      "autor": "L.S Englantine",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 3068,
+      "resumo": "Nicola Wolf não pode mais competir. Seu sonho de infância foi rapidamente destruído. Algumas pessoas diriam que é apenas uma consequência de uma própria escolha de Nicola, ela, talvez, enxergue como apenas má sorte. Infelizmente, para a garota de apenas vinte e dois anos, se descobrir em um mundo sem a dança no gelo foi uma lástima. Um choque de realidade e naturalidade que ela jamais quis sentir. Um ano após sua literal queda, Nicola sabe que a família está mais unida, que os pais estão sorridentes e o irmão mais receptivo — ou não. Menos ela. A culpa arranhava sua pele e invadia seu sono, era ela que fazia Nicola se lembrar que seu melhor amigo e parceiro de dança, Harvey Bird, não tem um rumo. A busca para uma nova parceira começa, mas a garota não faz ideia que elas se encerram assim que coloca os olhos em Aster Campbell; sua intrigante vizinha jogadora de hóquei.",
+      "numero_paginas": 390,
+      "idioma": "Português",
+      "data_publicacao": "11 outubro 2020",
+      "serie": "Nicola & Aster (1 livros)"
+    },
+    {
+      "id": 3,
+      "titulo": "Uma pitada de sorte",
+      "autor": "G. B. Baldassari",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.8,
+      "numero_avaliacoes": 762,
+      "resumo": "E se um livro te indicasse uma pessoa? Amélia é uma jovem chef de cozinha que busca sucesso dentro da alta gastronomia. Depois de uma entrevista de emprego desastrosa, ela vê sua coleção de fracassos aumentar. As coisas também não vão bem no quesito amor, e ela sente que precisa, desesperadamente, de uma volta por cima. Decidida a dar uma chance ao destino, Amélia deixa um bilhete com seu endereço de e-mail dentro do seu livro preferido e o vende em um sebo. Se tudo der certo, ele vai trazer a garota dos seus sonhos. Simples assim. Exceto que, para Amélia, nada acontece de forma simples ou sem muita confusão. Uma pitada de sorte é um romance sáfico que tem como pano de fundo o charme de um inverno em Buenos Aires e a nostalgia do ano de 2007. Uma história com protagonismo feminino, amizades reais e uma mãozinha do destino.",
+      "numero_paginas": null,
+      "idioma": "Português",
+      "data_publicacao": "15 janeiro 2024",
+      "serie": null
+    },
+    {
+      "id": 4,
+      "titulo": "Twister",
+      "autor": "Valéria de Paulo",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.7,
+      "numero_avaliacoes": 946,
+      "resumo": "Sensualidade… Mentiras… Reviravoltas… Paixão avassaladora… O que fazer quando um tornado em forma de mulher adentra pela sua vida? A bela, divertida e cativante Jéssica Clark sempre pautou sua vida pela verdade e solidariedade, mas não se engane por sua carinha bonita e sorriso encantador, pois para defender os seus princípios e aqueles que ama, ela se torna uma fera em todos os sentidos. Do lado inverso dessa história, existe a arrogante, elegante e sensual empresária Amanda Wood, que se passa por outra pessoa para conseguir informações importantes para um contrato bilionário. Descobre, no entanto, que a simplicidade e sinceridade são armas poderosas contra a mentira. Duas mulheres supostamente opostas descobrem o quão poderoso é um amor totalmente intempestivo. Verdades e mentiras, fundem-se neste surpreendente romance repleto de reviravoltas e que irá te tirar o fôlego.",
+      "numero_paginas": 764,
+      "idioma": "Português",
+      "data_publicacao": "30 junho 2021",
+      "serie": null
+    },
+    {
+      "id": 5,
+      "titulo": "Deu Match!",
+      "autor": "Cris Soares",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.3,
+      "numero_avaliacoes": 1020,
+      "resumo": "Lia é uma mulher de 31 anos, bissexual e desiludida com o amor. Apesar da romântica que sempre foi, decide se tornar uma mulher mais desprendida da vida sentimental para agarrar-se com a carnal. Uma aposta com sua melhor amiga surge, fazendo-a resolver a se aventurar em um famoso aplicativo de encontros, a forma mais fácil para conseguir adentrar no mundo do sexo casual. Porém, após dar match com Júlia, Lia perceberá que, às vezes, pegar uma direção oposta nem sempre te leva para longe do que se quer fugir.",
+      "numero_paginas": 64,
+      "idioma": "Português",
+      "data_publicacao": "7 junho 2019",
+      "serie": null
+    },
+    {
+      "id": 6,
+      "titulo": "Boas Maneiras",
+      "autor": "L.S Englantine",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 1157,
+      "resumo": "ESTE É UM LIVRO DE ROMANCE SÁFICO, NEW ADULT, COM CLASSIFICAÇÃO +16! Se contassem para Ária que a fama viria de um vídeo amador e mal gravado feito às pressas, ela teria preparado-se melhor. Garçonete em um bar musical e familiar, a artista de rua sempre teve sérios objetivos; ser uma estrela, principalmente. Quando uma celebridade extremamente reservada compartilha seu mais novo cover a fim de viralizar, Ária Campos é o mais novo rostinho saído do anonimato. Clarissa de La Plume é conhecida desde criança. Membro de uma família de sobrenome imponente, poderia facilmente participar de um reality show. A última peça para entender sua popularidade torna-se impetuosa quando seu pai torna-se prefeito de São Palomane. De polos diferentes, improvável que uma amizade surgisse do enlace entre as duas. E apesar de não suportar conviver com Clarissa, Ária terá que aprender que a fama, o sucesso e os bastidores políticos são bem mais engenhosos do que pensa. Com algumas mentirinhas bem contadas e uma amizade falsa diante das câmeras, a cantora lidará com sua nova vida. E uma nova não-amiga. \"Boas Maneiras\" é um divertido romance sobre amor, sonhos e muita música.",
+      "numero_paginas": 519,
+      "idioma": "Português",
+      "data_publicacao": "11 dezembro 2022",
+      "serie": null
+    },
+    {
+      "id": 7,
+      "titulo": "Quem Sabe?",
+      "autor": "Cris Soares",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 151,
+      "resumo": "Duas mulheres vivem fases distintas de suas individualidades e estão fugindo de qualquer indício de desenvolver uma relação afetiva, porém, quando duas pessoas estão destinadas a se conectarem, nem sempre o universo vai esperar você se sentir pronto para isso. Entretanto, ir adiante ou recuar, sempre será uma escolha.",
+      "numero_paginas": 25,
+      "idioma": "Português",
+      "data_publicacao": "26 junho 2021",
+      "serie": null
+    },
+    {
+      "id": 8,
+      "titulo": "Ainda bem que encontrei você",
+      "autor": "Marie Pessoa",
+      "ilustrador": "Giu Lopes",
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.2,
+      "numero_avaliacoes": 1211,
+      "resumo": "Quando Kariya decidiu ir até o Museu Submerso para a estreia de um documentário, não imaginou encontrar por lá Lana Boeing, sua grande paixão platônica. Agora, ela terá que lidar com a timidez e o passado para beijar a mulher dos seus sonhos.",
+      "numero_paginas": null,
+      "idioma": "Português",
+      "data_publicacao": "26 agosto 2020",
+      "serie": null
+    },
+    {
+      "id": 9,
+      "titulo": "O Amor, Garotas & Chocolates",
+      "autor": "Nora Darzé",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.1,
+      "numero_avaliacoes": 1706,
+      "resumo": "Esse conto contém gatilhos de menção a lesbofobia e bifobia (passado). Bruna Menezes anda cansada de sua vida monótona, é sempre de casa ao trabalho e do trabalho para casa, porém as férias de verão finalmente chegaram e as vendas na chocolataria local que a mesma trabalha acaba aumentando em níveis absurdos, ou seja, trabalho em dobro. Mas durante seu fim de expediente recebe uma visita inesperada e acompanhada de uma nova amiga. Bruna agora vai experimentar o que são novas relações, o amor e tudo em meio a chocolates.",
+      "numero_paginas": null,
+      "idioma": "Português",
+      "data_publicacao": "29 agosto 2021",
+      "serie": null
+    },
+    {
+      "id": 10,
+      "titulo": "Sua Alteza Real (Royals 2)",
+      "autor": "Rachel Hawkins",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.7,
+      "numero_avaliacoes": 4242,
+      "resumo": "O tão aguardado segundo livro da autora de Como sobreviver à realeza. Millie Quint fica arrasada quando descobre que sua meio-que-melhor-amiga/meio-que-namorada tem beijado outra pessoa. De coração partido e pronta para uma mudança de vida, ela decide levar adiante o sonho de estudar em terras escocesas. Quando consegue uma bolsa em um dos colégios mais exclusivos do mundo, Millie mal consegue acreditar. Apaixonada por tudo o que é relacionado a geologia, ela vê na rochosa Escócia o lugar perfeito para começar uma nova fase de sua vida. O único problema é sua colega de quarto, Flora, que age como uma princesinha mimada. Claro, ela é uma princesa de verdade. No começo, as duas não se suportam – Flora é tanto esnobe quanto expert em se meter em confusões – mas, quando Millie se dá conta, ela tem outra meio-que-melhor-amiga/ meio-que-namorada. A princesa Flora pode até ser um novo capítulo em sua vida amorosa, mas Millie não quer ser coadjuvante na história de ninguém. As chances de um “felizes para sempre” podem ser poucas, mas isso não significa que elas não existam...",
+      "numero_paginas": null,
+      "idioma": "Português",
+      "data_publicacao": "19 outubro 2020",
+      "serie": "Royals, Livro 2 de 2"
+    },
+    {
+      "id": 11,
+      "titulo": "Conectadas",
+      "autor": "Clara Alves",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.7,
+      "numero_avaliacoes": 10179,
+      "resumo": "Ser uma garota gamer não é fácil. Principalmente quando um romance está em jogo. Raíssa e Ayla se conheceram jogando Feéricos, um dos games mais populares do momento, e não se desgrudaram mais — pelo menos virtualmente. Ayla sente que, com Raíssa, finalmente pode ser ela mesma. Raíssa, por sua vez, encontra em Ayla uma conexão que nunca teve com ninguém. Só tem um \"pequeno\" problema: Raíssa joga com um avatar masculino, então Ayla não sabe que está conversando com outra menina. Quanto mais as duas se envolvem, mais culpa Raíssa sente. Só que ela não está pronta para se assumir — muito menos para perder a garota que ama. Então só vai levando a mentira adiante… Afinal, qual é a chance de as duas se conhecerem pessoalmente, morando em cidades diferentes? Bem alta, já que foi anunciada a primeira feira de Feéricos em São Paulo, o evento perfeito para esse encontro acontecer. Em um fim de semana repleto de cosplays, confidências e corações partidos, será que esse romance on-line conseguirá sobreviver à vida real?",
+      "numero_paginas": null,
+      "idioma": "Português",
+      "data_publicacao": "31 julho 2019",
+      "serie": null
+    },
+    {
+      "id": 12,
+      "titulo": "Um Verão para Recomeçar",
+      "autor": "Thais Mora",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 207,
+      "resumo": "\"Um Verão pra Recomeçar\" é um livro que aborda o tema das escolhas que fazemos em prol de um relacionamento e como isso pode nos afastar de nós mesmos. A história começa quando Naju viaja com os amigos da namorada e se depara com o abismo social, algo que até então só via nos noticiários. A partir daí, ela presencia uma série de eventos que fazem seu namoro ruir e seu mundo desabar. Naju encontra em Martina, uma pessoa perdida como ela, o apoio que precisa para seguir em frente. Juntas, elas passam por momentos difíceis e descobrem que o amor e o companheirismo são fundamentais para superar as adversidades. Ao longo da trama, o livro mostra como o comodismo e as escolhas que fazemos em prol de um relacionamento podem nos levar a nos anular e nos afastar de nós mesmos. A história de Naju serve como um alerta sobre os riscos de nos colocarmos na beira do precipício em nome do amor.",
+      "numero_paginas": 67,
+      "idioma": "Português",
+      "data_publicacao": "25 junho 2022",
+      "serie": null
+    },
+    {
+      "id": 13,
+      "titulo": "Procura-se um amor que goste de crianças",
+      "autor": "Valentina Ferreira",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 683,
+      "resumo": "Desempregada, Ana Clara morou de favor na casa da irmã até aceitar um emprego de babá nos classificados do jornal. Em meio aos percalços do novo emprego, ela precisa encontrar uma maneira de cuidar de três pestinhas enquanto tenta não se apaixonar pela sua chefe, uma mãe solteira que muda sua vida em pouco tempo.",
+      "numero_paginas": 71,
+      "idioma": "Português",
+      "data_publicacao": "4 março 2022",
+      "serie": null
+    },
+    {
+      "id": 14,
+      "titulo": "Mais que um Drink",
+      "autor": "Brenda ZulP",
+      "ilustrador": "Lady Melo",
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.3,
+      "numero_avaliacoes": 456,
+      "resumo": "Marília, há poucos meses em São Paulo, é convidada por seus colegas para ir a uma balada. Ela espera apenas se divertir e dançar, mas lá, conhece a barwoman que, além de preparar a melhor gim-tônica de frutas vermelhas, tem um sorriso encantador e um beijo tão embriagante quanto seus drinks.",
+      "numero_paginas": 40,
+      "idioma": "Português",
+      "data_publicacao": "20 junho 2022",
+      "serie": null
+    },
+    {
+      "id": 15,
+      "titulo": "Vindicta",
+      "autor": "Mari Lucioli",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.4,
+      "numero_avaliacoes": 692,
+      "resumo": "Duas assassinas, uma missão. Vindicta é uma boate queer em São Paulo que durante o dia se transforma em um centro de treinamento para pessoas queer com o objetivo de livrar o mundo daqueles que os odeiam. É lá que Tabatha e Daniela, duas mercenárias com uma rivalidade ardente, terão que aprender a lidar com seus sentimentos conflitantes e uma atração indiscutível para fazer um bom trabalho na Missão Final.",
+      "numero_paginas": 64,
+      "idioma": "Português",
+      "data_publicacao": "12 junho 2022",
+      "serie": null
+    },
+    {
+      "id": 16,
+      "titulo": "Entre as folhas das arvores",
+      "autor": "DjiEm",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.5,
+      "numero_avaliacoes": 669,
+      "resumo": "Tarsila, que planejava uma trilha com os colegas para reconquistar a ex, acaba indo apenas com Sadie, uma garota que ela julgava ser uma patricinha tediosa. As aparências, porém, enganam e o plano de Tarsila pode acabar dando um resultado ainda melhor que o esperado.",
+      "numero_paginas": null,
+      "idioma": null,
+      "data_publicacao": "18 abril 2022",
+      "serie": {
+        "nome": "Por do sol",
+        "numero_livro": 1
+      }
+    },
+    {
+      "id": 17,
+      "titulo": "Por Uma Noite",
+      "autor": "Yasmin Nunez",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.7,
+      "numero_avaliacoes": 2769,
+      "resumo": "Para provar à sua família que não é uma mentirosa, Lílian procura uma namorada de aluguel para o jantar de Natal. Ela só não esperava que sua ajuda viesse de Naila, sua chefe, com quem mal consegue passar alguns minutos no mesmo ambiente. Agora, as duas precisam convencer a família de Lílian de que estão perdidamente apaixonadas e, como dizem, toda mentira bem contada tem um fundo de verdade.",
+      "numero_paginas": 119,
+      "idioma": "Português",
+      "data_publicacao": "24 dezembro 2021",
+      "serie": null
+    },
+    {
+      "id": 18,
+      "titulo": "Flat 102",
+      "autor": "Cris Soares",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.3,
+      "numero_avaliacoes": 158,
+      "resumo": "Marcela sempre sentiu atração por mulheres, mas abafou seus instintos em seu casamento com Otávio. Tudo muda quando eles conhecem Isadora, uma mulher livre. Os gritos de sua essência por liberdade não se calam e ecoam cada vez mais alto em seu peito. Será que Marcela será mais forte do que os desígnios do próprio corpo?",
+      "numero_paginas": 28,
+      "idioma": "Português",
+      "data_publicacao": "10 abril 2019",
+      "serie": null
+    },
+    {
+      "id": 19,
+      "titulo": "Tudo que pode dar errado",
+      "autor": "Rebeca de Arruda",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.2,
+      "numero_avaliacoes": 527,
+      "resumo": "Carol, a garota do SAC da Associação Pernambucana de Caça e Conservação de Monstros, descobre que uma vampira está morando ilegalmente no apartamento em cima do seu. Ela vê nisso uma chance de ser promovida, mas quanto mais convive com Lara, a vampira, mais percebe que não sabe nada sobre monstros e que seus sentimentos por Lara podem se tornar um impedimento para o cargo que sempre sonhou.",
+      "numero_paginas": 46,
+      "idioma": "Português",
+      "data_publicacao": "2 fevereiro 2021",
+      "serie": null
+    },
+    {
+      "id": 20,
+      "titulo": "Sutilmente",
+      "autor": "Nina Spim",
+      "ilustrador": "Alice Gonçalves",
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.2,
+      "numero_avaliacoes": 320,
+      "resumo": "A escola pode ser um ambiente hostil para se fazer amizades, mas é justamente na sala de aula que Giovana conhece a nuance e a cor do amor. Laura, a nova aluna, tem seu mundo particular de certezas virado de cabeça para baixo ao conhecer a libertação que o novo provoca.",
+      "numero_paginas": 14,
+      "idioma": "Português",
+      "data_publicacao": "20 setembro 2015",
+      "serie": null
+    },
+    {
+      "id": 21,
+      "titulo": "Quase amor",
+      "autor": "Julia Braga",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.3,
+      "numero_avaliacoes": 180,
+      "resumo": "Brisa nunca havia se apaixonado antes, até que no verão conhece Georgina, uma garota linda, engraçada e decidida, que não sente o mesmo por ela. Brisa, então, decide usar seus conhecimentos básicos de feiticeira iniciante para produzir uma poção do amor.",
+      "numero_paginas": 16,
+      "idioma": "Português",
+      "data_publicacao": "31 julho 2020",
+      "serie": null
+    },
+    {
+      "id": 22,
+      "titulo": "Cromático",
+      "autor": "Keziah Prado",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.6,
+      "numero_avaliacoes": 396,
+      "resumo": "Lori Garcia, que convive com o dom de ler mentes, odeia sua habilidade até que ouve uma melodia singular nos pensamentos de Merlí Baez. Merlí, uma garota instável, arrasta Lori para o meio de uma investigação amadora. Lori, que nunca soube lidar muito bem consigo mesma, se vê presa naquilo e irremediavelmente atraída por Merlí.",
+      "numero_paginas": 227,
+      "idioma": "Português",
+      "data_publicacao": "5 janeiro 2021",
+      "serie": null
+    },
+    {
+      "id": 23,
+      "titulo": "A Mariana errada",
+      "autor": "Julia Braga",
+      "ilustrador": "Paula Januzzi",
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.7,
+      "numero_avaliacoes": 2044,
+      "resumo": "Ingrid tem uma 'paixonite' por Mariana Goulart, mas nunca teve coragem de se declarar. Durante a festa junina da escola, alguém tem a ideia de algemar Ingrid com Mariana, mas ela acaba sendo presa com a Mariana errada: Mariana Brito, sua arqui-inimiga. Determinada a encontrar a 'Mariana Certa', Ingrid tenta encontrar uma saída dessa situação inusitada.",
+      "numero_paginas": null,
+      "idioma": null,
+      "data_publicacao": "6 junho 2021",
+      "serie": null
+    },
+    {
+      "id": 24,
+      "titulo": "Mesmo que eu vá embora",
+      "autor": "Lethycia Dias",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.2,
+      "numero_avaliacoes": 2001,
+      "resumo": "Camila e Helena são amigas virtuais separadas por mil quilômetros. Quando Camila viaja para a cidade de Helena para um evento acadêmico, elas finalmente têm a chance de se conhecer. Os sentimentos que já tinham uma pela outra se tornam mais profundos, mas o tempo que elas têm para ficar juntas é muito curto.",
+      "numero_paginas": 23,
+      "idioma": "Português",
+      "data_publicacao": "29 agosto 2019",
+      "serie": null
+    },
+    {
+      "id": 25,
+      "titulo": "A garota do banco de trás",
+      "autor": "Mary C. Müller",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.5,
+      "numero_avaliacoes": 3763,
+      "resumo": "Todos os dias, Bianca pega o mesmo ônibus e admira uma garota que apelidou de 'Kindle'. Perto de terminar o ano letivo e se mudar para fazer faculdade, ela percebe que talvez seja tarde demais para resolver seus sentimentos, a menos que faça algo rapidamente.",
+      "numero_paginas": null,
+      "idioma": null,
+      "data_publicacao": "19 maio 2020",
+      "serie": null
+    },
+    {
+      "id": 26,
+      "titulo": "Amor & Liberdade",
+      "autor": "Lis Selwyn",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.5,
+      "numero_avaliacoes": 170,
+      "resumo": "Cecília, com dezenove anos, tem uma vida quase perfeita até conhecer a enigmática Flora. O problema é que Flora é a irmã de Ricardo, o namorado de Cecília, e Cecília, que se pensava apaixonada por ele, começa a questionar seus sentimentos.",
+      "numero_paginas": 144,
+      "idioma": "Português",
+      "data_publicacao": "6 outubro 2019",
+      "serie": null
+    },
+    {
+      "id": 27,
+      "titulo": "Sua alteza real",
+      "autor": "Danielle Steel",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.2,
+      "numero_avaliacoes": 610,
+      "resumo": "Christianna, a filha mais nova do príncipe de Liechtenstein, troca seus vestidos de gala por roupas casuais para viver anonimamente. Ela volta à rotina real, mas pede permissão para trabalhar como voluntária da Cruz Vermelha na África Oriental. Lá, ela esconde sua identidade de todos, incluindo do charmoso pesquisador de Harvard, Parker Williams, enquanto descobre sua verdadeira vocação.",
+      "numero_paginas": null,
+      "idioma": null,
+      "data_publicacao": "30 julho 2013",
+      "serie": null
+    },
+    {
+      "id": 28,
+      "titulo": "A profecia da sereia",
+      "autor": "Clara Alves",
+      "ilustrador": null,
+      "formato": "eBook Kindle",
+      "avaliacao_estrelas": 4.5,
+      "numero_avaliacoes": 2529,
+      "resumo": "Lila é uma sereia que não se encaixa. Sem alma gêmea e com vontade de conhecer o mundo humano, ela descobre que uma profecia diz que irá encontrar sua alma gêmea numa festa de ano-novo. Desde então, Lila vai à superfície todo dia 31 de dezembro, até que um dia a encontra, mas percebe que ter uma alma gêmea humana pode ser mais difícil do que imaginava.",
+      "numero_paginas": null,
+      "idioma": null,
+      "data_publicacao": "30 dezembro 2019",
+      "serie": "Sereia, livro 1 de 3"
+    }
+  ],
+  "leituras": [
+    {
+      "id": 1,
+      "livro": 1,
+      "paginaAtual": 85,
+      "avaliacao": 5,
+      "observacoes": [
+        {
+          "pagina": 30,
+          "texto": "Amei o desenvolvimento do relacionamento entre Nicola e Aster. A transição de Salt para Brighton é muito bem construída."
+        },
+        {
+          "pagina": 60,
+          "texto": "A descrição da vida de Aster como enfermeira e treinadora é inspiradora. Adorei essa dualidade."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "livro": 2,
+      "paginaAtual": 250,
+      "avaliacao": 5,
+      "observacoes": [
+        {
+          "pagina": 50,
+          "texto": "A forma como a autora explora a superação de Nicola após a sua queda é emocionante. A dança no gelo é um pano de fundo perfeito."
+        },
+        {
+          "pagina": 150,
+          "texto": "A interação entre Nicola e Aster, a vizinha jogadora de hóquei, é cheia de tensão e charme. Adorei a química entre elas."
+        },
+        {
+          "pagina": 200,
+          "texto": "A busca por um novo parceiro de dança e a nova paixão se misturam de forma fascinante. Estou ansiosa pelo desfecho."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "livro": 3,
+      "paginaAtual": 110,
+      "avaliacao": 4.5,
+      "observacoes": [
+        {
+          "pagina": 25,
+          "texto": "A ideia do bilhete no livro é super original e romântica. Me fez querer ler mais."
+        },
+        {
+          "pagina": 80,
+          "texto": "O cenário de Buenos Aires em 2007 traz uma nostalgia gostosa para a história. A ambientação é impecável."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "livro": 4,
+      "paginaAtual": 400,
+      "avaliacao": 4.8,
+      "observacoes": [
+        {
+          "pagina": 150,
+          "texto": "A reviravolta no relacionamento de Jéssica e Amanda é de tirar o fôlego. As mentiras e a paixão criam um enredo viciante."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "livro": 5,
+      "paginaAtual": 50,
+      "avaliacao": 4,
+      "observacoes": [
+        {
+          "pagina": 20,
+          "texto": "Gostei de como a autora aborda a bissexualidade de Lia e a jornada dela para se reconectar com o amor. Muito sensível."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "livro": 6,
+      "paginaAtual": 300,
+      "avaliacao": 4.6,
+      "observacoes": [
+        {
+          "pagina": 100,
+          "texto": "A dinâmica entre Ária e Clarissa, com sua amizade falsa e a tensão romântica, é muito divertida. Adoro a parte musical."
+        },
+        {
+          "pagina": 250,
+          "texto": "Os bastidores políticos e a fama adicionam uma camada de complexidade interessante. Não é só um romance."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "livro": 7,
+      "paginaAtual": 20,
+      "avaliacao": 4.5,
+      "observacoes": [
+        {
+          "pagina": 15,
+          "texto": "A forma como o universo faz as duas personagens se conectarem é poética. Me fez pensar no destino."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "livro": 8,
+      "paginaAtual": 40,
+      "avaliacao": 4.2,
+      "observacoes": [
+        {
+          "pagina": 10,
+          "texto": "O cenário do Museu Submerso é muito original e romântico. Uma ótima forma de começar uma história de amor."
+        },
+        {
+          "pagina": 35,
+          "texto": "A luta de Kariya com a timidez é algo que me identifiquei muito. Quero muito ver o beijo acontecer!"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "livro": 9,
+      "paginaAtual": 60,
+      "avaliacao": 4.1,
+      "observacoes": [
+        {
+          "pagina": 20,
+          "texto": "A história é leve e deliciosa, como chocolate. A chegada da nova amiga e as novas relações são muito bem descritas."
+        },
+        {
+          "pagina": 55,
+          "texto": "Adorei a ambientação na chocolataria. Me deu vontade de comer chocolate enquanto lia."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "livro": 10,
+      "paginaAtual": 300,
+      "avaliacao": 4.7,
+      "observacoes": [
+        {
+          "pagina": 120,
+          "texto": "A dinâmica de Millie e Flora é um dos pontos fortes do livro. De inimigas a amantes é um dos meus clichês favoritos."
+        },
+        {
+          "pagina": 280,
+          "texto": "A Escócia como cenário é simplesmente perfeita. A descrição das paisagens rochosas é linda."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "livro": 11,
+      "paginaAtual": 200,
+      "avaliacao": 4.7,
+      "observacoes": [
+        {
+          "pagina": 100,
+          "texto": "A história de amor online de Raíssa e Ayla é muito atual. A tensão da mentira é palpável e me deixa muito envolvida."
+        },
+        {
+          "pagina": 180,
+          "texto": "O universo gamer é muito bem explorado. Os detalhes sobre o jogo Feéricos são muito interessantes."
+        },
+        {
+          "pagina": 195,
+          "texto": "O encontro na feira em São Paulo é o clímax que eu estava esperando. Mal posso esperar para ver como as coisas se desenrolam."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "livro": 12,
+      "paginaAtual": 50,
+      "avaliacao": 4.6,
+      "observacoes": [
+        {
+          "pagina": 20,
+          "texto": "A história aborda temas muito importantes como anulação pessoal e escolhas em relacionamentos. A jornada de Naju é muito tocante."
+        },
+        {
+          "pagina": 45,
+          "texto": "A relação de Naju e Martina é muito acolhedora. A forma como elas se apoiam é linda de se ver."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "livro": 13,
+      "paginaAtual": 65,
+      "avaliacao": 4.6,
+      "observacoes": [
+        {
+          "pagina": 30,
+          "texto": "As 'três pestinhas' são hilárias! Adoro a relação de Ana Clara com as crianças."
+        },
+        {
+          "pagina": 55,
+          "texto": "A tensão romântica entre Ana Clara e sua chefe é cativante. Uma história de babá e mãe solteira muito charmosa."
+        }
+      ]
+    }
+  ]
+}
