@@ -1,16 +1,21 @@
-import DashboardView from '@/views/DashboardView.vue'
+import LoginView from '@/views/LoginView.vue';
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      component: DashboardView,
-    },
-    {
       path: '/:pathMatch(.*)*',
       component: () => import('../views/NotFound.vue'),
+    },
+    {
+      path: '/',
+      name: 'login',
+      component: LoginView
+    },
+    {
+      path: '/dashboard',
+      component: () => import('../views/DashboardView.vue'),
     },
     {
       path: '/produto/:id(\\d+)',
@@ -56,6 +61,14 @@ const router = createRouter({
       component: () => import('../views/ProdutosView.vue')
     },
   ],
-})
+});
+
+router.beforeEach(async (to, from) => {
+  // Lógica de Negócio
+  const usuario = sessionStorage.getItem('usuario');
+  if (!usuario && to.name !== 'login') {
+    return '/'
+  }
+});
 
 export default router

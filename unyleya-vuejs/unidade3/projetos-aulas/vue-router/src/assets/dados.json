@@ -85,5 +85,11 @@
       "pergunta": "Vocês entregam na lua?",
       "resposta": "Suspendisse ipsum eros, finibus a lacus eget, egestas mattis erat. Donec nec fringilla elit, vitae aliquet ligula. In malesuada aliquet tellus, non auctor felis eleifend ut. Nulla ac sodales orci. Phasellus ac metus venenatis, tempus orci at, dapibus nisi. Morbi laoreet lorem nec erat cursus, id tristique dolor tempor. Morbi commodo nec urna quis sagittis. "
     }
+  ],
+  "usuarios": [
+    {
+      "email": "bea@castro.com",
+      "senha": "654321"
+    }
   ]
 }
