@@ -11,11 +11,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'login',
-      component: LoginView
+      component: LoginView,
+      meta: { requiresAuth: false },
     },
     {
       path: '/dashboard',
       component: () => import('../views/DashboardView.vue'),
+      meta: { requiresAuth: false },
       // beforeEnter: (to, from) => {
       //   const usuario = sessionStorage.getItem('usuario');
       //   if (!usuario)
@@ -26,6 +28,7 @@ const router = createRouter({
       path: '/produto/:id(\\d+)',
       component: () => import('../views/ProdutoView.vue'),
       props: true,
+      meta: { requiresAuth: true },
       children: [
         {
           path: "",
@@ -50,20 +53,24 @@ const router = createRouter({
     {
       path: '/clientes',
       component: () => import('../views/ClientesView.vue'),
+      meta: { requiresAuth: true },
     },
     {
       path: '/clientes/:id/pedidos',
       component: () => import('../views/PedidosView.vue'),
       props: true,
+      meta: { requiresAuth: true },
     },
     {
       path: '/clientes/:clId/pedidos/:pdId',
       component: () => import('../views/PedidoDetalhesView.vue'),
       props: true,
+      meta: { requiresAuth: true },
     },
     {
       path: '/produto',
-      component: () => import('../views/ProdutosView.vue')
+      component: () => import('../views/ProdutosView.vue'),
+      meta: { requiresAuth: true },
     },
   ],
 });
@@ -71,7 +78,7 @@ const router = createRouter({
 router.beforeEach(async (to, from) => {
   // Lógica de Negócio
   const usuario = sessionStorage.getItem('usuario');
-  if (!usuario && to.name !== 'login') {
+  if (!usuario && to.meta.requiresAuth) {
     return '/'
   }
 });
