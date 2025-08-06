@@ -1,12 +1,30 @@
 <script setup>
 import { ref } from 'vue';
+import { onBeforeRouteUpdate } from 'vue-router';
 
 const { id: clienteId } = defineProps(['id']);
-
 
 const cliente = ref(null)
 const pedidos = ref([]);
 const mensagem = ref(null);
+
+onBeforeRouteUpdate(async (to, from) => {
+ if (to.params.id !== from.params.id) {
+    fetch('/src/assets/dados.json')
+      .then(res => res.json())
+      .then(dados => updateCliente(dados, to.params.id))
+      .catch(err => mensagem.value = err)
+ }
+});
+
+const updateCliente = (dados, clienteId) => {
+  const pds = dados.pedidos;
+  const clts = dados.clientes;
+  cliente.value = clts.filter(cliente => {
+    return cliente.id == clienteId
+  })[0]
+  pedidos.value = pds.filter(pedido => pedido.clienteId == clienteId)
+}
 
 fetch('/src/assets/dados.json')
   .then(res => res.json())
@@ -29,7 +47,11 @@ const gerarLink = (pedido) => {
 </script>
 
 <template>
-  <h3>Cliente: {{ cliente?.nome }}</h3>
+  <nav>
+    <RouterLink :to="`/clientes/${(+id) - 1}/pedidos`">Anterior</RouterLink>
+    <h3>#{{ id }} {{ cliente?.nome }}</h3>
+    <RouterLink :to="`/clientes/${(+id) + 1}/pedidos`">Anterior</RouterLink>
+  </nav>
   <table v-if="pedidos.length > 0">
     <thead>
       <tr>
@@ -59,6 +81,12 @@ const gerarLink = (pedido) => {
 </template>
 
 <style scoped>
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px;
+}
+
 table {
   margin: 16px auto;
   width: 90vw;

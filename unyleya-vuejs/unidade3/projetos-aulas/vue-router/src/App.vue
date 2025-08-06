@@ -2,7 +2,8 @@
 const menu = [
   { rota: '/dashboard', rotulo: 'Início' },
   { rota: '/produto', rotulo: 'Produtos' },
-  { rota: '/clientes', rotulo: 'Clientes' }
+  { rota: '/clientes', rotulo: 'Clientes' },
+  { rota: '/clientes/1/pedidos', rotulo: 'Pedidos'},
 ];
 </script>
 

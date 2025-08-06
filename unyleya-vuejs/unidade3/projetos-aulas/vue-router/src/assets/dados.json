@@ -24,6 +24,23 @@
         3,
         4
       ]
+    },
+    {
+      "id": 2,
+      "clienteId": 1,
+      "situacao": "aberto",
+      "produtosId": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "clienteId": 1,
+      "situacao": "aberto",
+      "produtosId": [
+        1,
+        5
+      ]
     }
   ],
   "avaliacoes": [

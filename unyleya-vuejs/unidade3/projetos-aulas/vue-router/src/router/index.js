@@ -16,11 +16,11 @@ const router = createRouter({
     {
       path: '/dashboard',
       component: () => import('../views/DashboardView.vue'),
-      beforeEnter: (to, from) => {
-        const usuario = sessionStorage.getItem('usuario');
-        if (!usuario)
-          return '/'
-      }
+      // beforeEnter: (to, from) => {
+      //   const usuario = sessionStorage.getItem('usuario');
+      //   if (!usuario)
+      //     return '/'
+      // }
     },
     {
       path: '/produto/:id(\\d+)',
