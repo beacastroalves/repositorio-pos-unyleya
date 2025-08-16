@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 200px;
+  padding: 16px;
+  background-color: goldenrod;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 28px;
+  color: #555;
+}
