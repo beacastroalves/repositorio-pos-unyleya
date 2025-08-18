@@ -2,16 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 .container {
-  height: 100%;
-  padding: 16px;
-  background-color: goldenrod;
-}
-
-.subtitle {
-  margin: 0;
-  font-size: 28px;
-  color: #555;
+  background-color: #f6f6f6;
 }
