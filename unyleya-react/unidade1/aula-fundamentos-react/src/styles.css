@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
 }

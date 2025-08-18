@@ -50,18 +50,20 @@
   transition: background-color 0.25s, transform 0.25s;
 }
 
-.container-cards {
+.container-home-cards {
   color: #f6f6f6;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 40px;
   padding: 64px;
 }
 
-.container-cards .card {
+.container-home-cards .card-home {
   padding: 16px;
   background-color: red;
+  min-width: 250px;
   width: 250px;
   height: 140px;
   display: flex;
@@ -72,26 +74,29 @@
   border-radius: 8px;
 }
 
-.container-cards .card:last-child {
+.container-home-cards .card-home:last-child {
   background-color: green;
 }
 
-.container-cards .card h2 {
+.container-home-cards .card-home h2 {
   margin: 0;
+  z-index: 2;
 }
 
-.container-cards .card img {
+.container-home-cards .card-home img {
   position: absolute;
   bottom: 8px;
-  right: 16px;
+  right: 8px;
   width: 100px;
+  z-index: 1;
 }
 
-.container-cards .card:last-child img {
+.container-home-cards .card-home:last-child img {
   width: 80px;
+  right: 16px;
 }
 
-.container-cards .card button {
+.container-home-cards .card-home button {
   padding: 6px 16px;
   background-color: rgba(0,0,0, 0.25);
   color: #f6f6f6;
@@ -99,4 +104,5 @@
   border-radius: 4px;
   box-shadow: 1px 1px 10px rgba(0,0,0, 0.05);
   font-size: 12px;
+  z-index: 2;
 }

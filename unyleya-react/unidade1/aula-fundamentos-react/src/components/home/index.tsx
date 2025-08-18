@@ -12,15 +12,15 @@ const Home = () => {
         <button className="btn-primary-home">Encontrar</button>
       </div>
 
-      <div className="container-cards">
-        <div className="card">
+      <div className="container-home-cards">
+        <div className="card-home">
           <h2>Comidas</h2>
 
           <button>Ver opções</button>
           <img src={hamburguer} />
         </div>
 
-        <div className="card">
+        <div className="card-home">
           <h2>Bebidas</h2>
 
             <button>Ver opções</button>

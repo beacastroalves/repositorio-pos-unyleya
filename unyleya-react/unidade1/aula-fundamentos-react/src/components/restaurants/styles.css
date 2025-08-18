@@ -1,0 +1,38 @@
+.container-restaurant-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 16px 64px 128px;
+}
+
+.container-restaurant-cards .card-restaurant {
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 8px;
+  min-width: 250px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.container-restaurant-cards .card-restaurant .circle {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.container-restaurant-cards .card-restaurant .card-info p:first-child {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.container-restaurant-cards .card-restaurant .card-info p:last-child {
+  color: #999999;
+  font-size: 12px;
+}
