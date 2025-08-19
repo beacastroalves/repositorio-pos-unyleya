@@ -4,7 +4,7 @@ interface CardProps {
   name: string;
   category: string;
   color: string;
-}
+};
 
 const Card = (props: CardProps) => {
   return (
@@ -15,7 +15,7 @@ const Card = (props: CardProps) => {
         <p>{props.category}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

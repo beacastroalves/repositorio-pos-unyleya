@@ -1,10 +1,17 @@
+.container-restaurant h4 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #444;
+  padding-left: 64px;
+}
+
 .container-restaurant-cards {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 16px 64px 128px;
+  padding: 64px;
+  padding-bottom: 32px;
 }
 
 .container-restaurant-cards .card-restaurant {

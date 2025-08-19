@@ -84,7 +84,7 @@ const Restaurants = () => {
         }
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Restaurants;

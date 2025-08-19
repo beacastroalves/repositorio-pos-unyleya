@@ -1,6 +1,6 @@
 import "./styles.css";
-import hamburguer from "../../assets/images/hamburguer.png"
-import bebidas from "../../assets/images/bebidas.png"
+import hamburguer from "../../assets/images/hamburguer.png";
+import bebidas from "../../assets/images/bebidas.png";
 
 const Home = () => {
   return (
@@ -27,10 +27,9 @@ const Home = () => {
             <img src={bebidas} />
         </div>
       </div>
-      <div className="line"></div>
     </div>
-  )
-}
+  );
+};
 
 
 export default Home;
