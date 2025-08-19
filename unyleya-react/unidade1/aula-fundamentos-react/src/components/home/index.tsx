@@ -27,6 +27,7 @@ const Home = () => {
             <img src={bebidas} />
         </div>
       </div>
+      <div className="line"></div>
     </div>
   )
 }

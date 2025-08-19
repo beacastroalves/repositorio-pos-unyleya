@@ -4,7 +4,9 @@
 }
 
 .container-home h2 {
+  font-size: 24px;
   text-align: center;
+  font-weight: 600;
   margin: 32px auto;
 }
 
@@ -17,8 +19,8 @@
 
 .container-input input {
   width: 100%;
-  max-width: 500px;
-  padding: 8px 16px;
+  max-width: 600px;
+  padding: 8px 32px;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -29,10 +31,11 @@
   outline: 1px solid #c6c6c6;
 }
 
-.btn-primary-home {
+.container-input .btn-primary-home {
   background-color: rgb(220, 0, 0);
   color: #f6f6f6;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   padding: 8px 24px;
   border: none;
   border-radius: 8px;
@@ -40,11 +43,11 @@
   user-select: none;
 }
 
-.btn-primary-home:hover {
+.container-input .btn-primary-home:hover {
   background-color: rgb(200, 0, 0);
 }
 
-.btn-primary-home:active {
+.container-input .btn-primary-home:active {
   background-color: rgb(180, 0, 0);
   transform: translate(1px, 1px);
   transition: background-color 0.25s, transform 0.25s;
@@ -61,14 +64,14 @@
 }
 
 .container-home-cards .card-home {
-  padding: 16px;
+  padding: 40px 24px;
   background-color: red;
   min-width: 250px;
-  width: 250px;
-  height: 140px;
+  width: 380px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   position: relative;
   border-radius: 8px;
@@ -79,6 +82,8 @@
 }
 
 .container-home-cards .card-home h2 {
+  font-size: 32px;
+  font-weight: 700;
   margin: 0;
   z-index: 2;
 }
@@ -86,23 +91,31 @@
 .container-home-cards .card-home img {
   position: absolute;
   bottom: 8px;
-  right: 8px;
-  width: 100px;
+  right: 20px;
+  width: 150px;
   z-index: 1;
 }
 
 .container-home-cards .card-home:last-child img {
-  width: 80px;
-  right: 16px;
+  width: 120px;
+  right: 24px;
 }
 
 .container-home-cards .card-home button {
-  padding: 6px 16px;
+  padding: 8px 48px;
   background-color: rgba(0,0,0, 0.25);
   color: #f6f6f6;
   border: none;
   border-radius: 4px;
   box-shadow: 1px 1px 10px rgba(0,0,0, 0.05);
   font-size: 12px;
+  font-weight: 500;
   z-index: 2;
+}
+
+.container-home .line {
+  width: 100vw;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 32px 0;
 }

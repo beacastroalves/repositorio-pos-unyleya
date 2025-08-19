@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,800;1,14..32,100..900&display=swap');
+
 .container-header {
   display: flex;
   justify-content: space-between;
   padding: 32px 64px;
 }
 
-h1 {
+.container-header h1 {
   color: rgb(220, 0, 0);
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
 }
 
-ul {
+.container-header ul {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -16,19 +21,20 @@ ul {
   color: #666;
 }
 
-li {
+.container-header ul li {
   cursor: pointer;
 }
 
-li:hover {
+.container-header ul li:hover {
   color: #444;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
 }
 
-.btn-primary-header {
+.container-header .btn-primary-header {
   background-color: rgb(220, 0, 0);
+  font-size: 16px;
   color: #f9f9f9;
-  font-weight: bold;
+  font-weight: 600;
   padding: 8px 24px;
   border: none;
   border-radius: 8px;
@@ -36,11 +42,11 @@ li:hover {
   user-select: none;
 }
 
-.btn-primary-header:hover {
+.container-header .btn-primary-header:hover {
   background-color: rgb(200, 0, 0);
 }
 
-.btn-primary-header:active {
+.container-header .btn-primary-header:active {
   background-color: rgb(180, 0, 0);
   transform: translate(1px, 1px);
   transition: background-color 0.25s, transform 0.25s;
