@@ -1,3 +1,4 @@
+import Card from '../card';
 import './styles.css';
 
 const restaurantes = [
@@ -72,13 +73,12 @@ const Restaurants = () => {
         {
           restaurantes.map((item, index) => {
             return (
-              <div className="card-restaurant" key={index}>
-                <div className='circle' style={{ backgroundColor: item.color}} />
-                <div className="card-info">
-                  <p>{item.name}</p>
-                  <p>{item.category}</p>
-                </div>
-              </div>
+              <Card
+                key={index}
+                name={item.name}
+                category={item.category}
+                color={item.color}
+              />
             );
           })
         }
