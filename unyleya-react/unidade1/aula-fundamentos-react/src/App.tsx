@@ -1,7 +1,8 @@
 import Header from "./components/header";
 import Home from "./components/home";
-import Info from "./components/info";
 import Restaurants from "./components/restaurants";
+import Info from "./components/info";
+import Footer from "./components/footer";
 import "./styles.css";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Restaurants />
       <div className="line"></div>
       <Info />
+      <Footer />
     </div>
   );
 };

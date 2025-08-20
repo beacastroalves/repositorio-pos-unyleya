@@ -1,5 +1,3 @@
-import './styles.css'
-
 interface CardInfoProps {
   title: string;
   description: string;

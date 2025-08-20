@@ -1,0 +1,19 @@
+.container-footer {
+  padding: 48px;
+  background-color: #dc0000;
+}
+
+.container-footer > h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 auto 16px;
+  color: #f6f6f6;
+}
+
+.container-footer .imgs-footer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}

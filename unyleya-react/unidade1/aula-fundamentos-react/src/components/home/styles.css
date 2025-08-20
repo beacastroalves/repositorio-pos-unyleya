@@ -33,7 +33,7 @@
 }
 
 .container-input .btn-primary-home {
-  background-color: rgb(220, 0, 0);
+  background-color: #dc0000;
   color: #f6f6f6;
   font-size: 16px;
   font-weight: 600;
@@ -45,11 +45,11 @@
 }
 
 .container-input .btn-primary-home:hover {
-  background-color: rgb(200, 0, 0);
+  background-color: #c80000;
 }
 
 .container-input .btn-primary-home:active {
-  background-color: rgb(180, 0, 0);
+  background-color: #b40000;
   transform: translate(1px, 1px);
   transition: background-color 0.25s, transform 0.25s;
 }
