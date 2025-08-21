@@ -4,6 +4,7 @@ import './style.css';
 const Login = () => {
 
   const [name, setName] = useState("");
+  console.log(name);
 
   return (
     <div className='container-login'>
