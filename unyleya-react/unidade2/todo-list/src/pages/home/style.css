@@ -1,0 +1,66 @@
+.container-home {
+  display: flex;
+}
+
+.container-home .container-form {
+  background-color: #450b53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  flex: 1;
+  height: 100dvh;
+  min-width: 350px;
+  width: 100%;
+}
+
+.container-home .container-form form {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  gap: 24px;
+  height: 65dvh;
+  width: 100%;
+  padding: 40px 24px;
+  border-radius: 16px;
+  color: #232323;
+}
+
+.container-home .container-form form h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.container-form form > :nth-child(2),
+.container-form form > :nth-child(3),
+.container-form form > :nth-child(4),
+.container-form form > :nth-child(5) {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #450b53;
+  background-color: #f6f6f6;
+  padding: 0 4px;
+  outline: none;
+  color: #232323;
+}
+
+.container-home .container-form form select:focus,
+.container-home .container-form form select:active {
+  color: #232323;
+}
+
+.container-form form button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #450b53;
+  color: #f6f6f6;
+  letter-spacing: 0.3mm;
+  font-size: 14px;
+}
+
+
+.container-tarefas {
+  flex: 3;
+}
