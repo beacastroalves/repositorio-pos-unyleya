@@ -1,0 +1,58 @@
+.container-login {
+  background-color: #450b53;
+  color: #f6f6f6;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.card-login {
+  background-color: #f6f6f6;
+  color: #131313;
+  min-width: 400px;
+  min-height: 300px;
+  padding: 48px 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card-login h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card-login input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #450b53;
+  margin-bottom: 32px;
+  font-size: 16px;
+  padding: 4px 8px;
+  outline-color: #4f175e;
+}
+
+.card-login button {
+  background-color: #59116b;
+  color: #f6f6f6;
+  padding: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3mm;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.card-login button:hover {
+  background-color: #450b53;
+}
+
+.card-login button:active {
+  background-color: #4f175e;
+  transform: translate(1px, 1px);
+  transition-duration: 0.15s;
+}
