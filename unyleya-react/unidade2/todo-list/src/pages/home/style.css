@@ -1,15 +1,14 @@
 .container-home {
   display: flex;
+  min-height: 100dvh;
 }
 
 .container-home .container-form {
   background-color: #450b53;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 128px 40px;
   flex: 1;
-  height: 100dvh;
   min-width: 350px;
   width: 100%;
 }
@@ -18,7 +17,6 @@
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   justify-content: space-around;
   gap: 24px;
   height: 65dvh;
@@ -59,7 +57,6 @@
   letter-spacing: 0.3mm;
   font-size: 14px;
 }
-
 
 .container-tarefas {
   flex: 3;
@@ -124,4 +121,12 @@
 .container-tarefas ul li .itens-right .tarefas-buttons {
   display: flex;
   gap: 8px;
+}
+
+.container-tarefas ul li .itens-right .tarefas-buttons .io-button {
+  cursor: pointer;
+}
+
+.container-tarefas ul li .itens-right .tarefas-buttons .io-button:hover {
+  filter: brightness(0.6);
 }

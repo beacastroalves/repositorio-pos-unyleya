@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { IoTrashOutline, IoCreate } from 'react-icons/io5';
 
 const tasks = [
   {
@@ -25,17 +26,37 @@ const tasks = [
 const Home = () => {
 
   const [titulo, setTitulo] = useState("");
-  const [categoria, setcategoria] = useState("");
+  const [categoria, setCategoria] = useState("");
   const [data, setData] = useState("");
   const [descricao, setDescricao] = useState("");
 
   const [tarefas, setTarefas] = useState(tasks);
-  console.log(setTarefas);
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log({ titulo, categoria, data, descricao});
+    const copyArray = [...tarefas];
+    copyArray.push({
+      title: titulo,
+      category: categoria,
+      date: data,
+      description: descricao
+    });
+
+    setTarefas([...tarefas,
+      {
+        title: titulo,
+        category: categoria,
+        date: data,
+        description: descricao
+      }
+    ]);
+
+    setTitulo("");
+    setCategoria("");
+    setDescricao("");
+    setData("");
+
   };
 
   return (
@@ -45,7 +66,7 @@ const Home = () => {
           <h2>Cadastrar Tarefa</h2>
           <input type="text" placeholder="Titulo" value={titulo} onChange={(event) => setTitulo(event.target.value)} />
 
-          <select value={categoria} onChange={(event) => setcategoria(event.target.value)}>
+          <select value={categoria} onChange={(event) => setCategoria(event.target.value)}>
             <option value="">Selecione a categoria</option>
             <option value="trabalho">Trabalho</option>
             <option value="estudo" >Estudo</option>
@@ -61,8 +82,8 @@ const Home = () => {
         <h2>Minhas Tarefas</h2>
         <ul>
           {
-            tarefas.map((tarefa) => (
-                <li>
+            tarefas.map((tarefa, index) => (
+                <li key={index}>
                   <div className='itens-left'>
                     <h4>{tarefa.title}</h4>
                     <p>{tarefa.category}</p>
@@ -71,8 +92,8 @@ const Home = () => {
                   <div className='itens-right'>
                     <p>{tarefa.date}</p>
                     <div className='tarefas-buttons'>
-                      <button>Editar</button>
-                      <button>Apagar</button>
+                      <IoCreate color="green" size={20} className='io-button' onClick={() => alert("Editando")} title='Editar' />
+                      <IoTrashOutline color="red" size={20} className='io-button' onClick={() => alert("Apagando")} title='Apagar' />
                     </div>
                   </div>
                 </li>
