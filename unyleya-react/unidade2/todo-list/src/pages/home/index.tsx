@@ -2,29 +2,41 @@ import React, { useState } from 'react';
 import './style.css';
 import { IoTrashOutline, IoCreate } from 'react-icons/io5';
 
+interface Task {
+  id: string,
+  title: string;
+  category: string;
+  description: string;
+  date: string;
+}
+
 const tasks = [
   {
+    id: "098704654",
     title: "Tarefa 1",
     category: "Trabalho",
     description: "Descrição teste 1",
-    date: "22-08-2025"
+    date: "2025-08-23"
   },
   {
+    id: "654132897",
     title: "Tarefa 2",
     category: "Trabalho",
     description: "Descrição teste 2",
-    date: "22-08-2025"
+    date: "2025-08-26"
   },
   {
+    id: "321546895",
     title: "Tarefa 3",
     category: "Estudo",
     description: "Descrição teste 3",
-    date: "22-08-2025"
+    date: "2025-08-10"
   },
 ]
 
 const Home = () => {
 
+  const [id, setId] = useState("");
   const [titulo, setTitulo] = useState("");
   const [categoria, setCategoria] = useState("");
   const [data, setData] = useState("");
@@ -32,44 +44,75 @@ const Home = () => {
 
   const [tarefas, setTarefas] = useState(tasks);
 
+  const [editando, setEditando] = useState(false);
+
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    
+    if (id) {
+      editTask();
+    } else {
+      setTarefas([...tarefas,
+        {
+          id: String(Date.now()),
+          title: titulo,
+          category: categoria,
+          date: data,
+          description: descricao
+        }
+      ]);
 
-    const copyArray = [...tarefas];
-    copyArray.push({
+      limpaFormulario();
+    }
+  };
+
+  const preencheEstados = (tarefa: Task) => {
+    setEditando(true);
+    setId(tarefa.id);
+    setTitulo(tarefa.title);
+    setCategoria(tarefa.category);
+    setDescricao(tarefa.description);
+    setData(tarefa.date);
+  };
+
+  const editTask = () => {
+    const posicaoArray = tarefas.findIndex((tarefa) => tarefa.id === id);
+
+    const copiaTarefas = [...tarefas];
+
+    copiaTarefas[posicaoArray] = {
+      id: id,
       title: titulo,
       category: categoria,
       date: data,
       description: descricao
-    });
+    }
 
-    setTarefas([...tarefas,
-      {
-        title: titulo,
-        category: categoria,
-        date: data,
-        description: descricao
-      }
-    ]);
+    setTarefas(copiaTarefas);
 
+    limpaFormulario();
+  };
+
+  const limpaFormulario = () => {
+    setEditando(false);
+    setId("");
     setTitulo("");
     setCategoria("");
     setDescricao("");
     setData("");
-
-  };
+  }
 
   return (
     <div className='container-home'>
       <div className='container-form'>
         <form onSubmit={submitForm}>
-          <h2>Cadastrar Tarefa</h2>
+          <h2>{editando ? "Editar" : "Cadastrar" } Tarefa</h2>
           <input type="text" placeholder="Titulo" value={titulo} onChange={(event) => setTitulo(event.target.value)} />
 
           <select value={categoria} onChange={(event) => setCategoria(event.target.value)}>
             <option value="">Selecione a categoria</option>
-            <option value="trabalho">Trabalho</option>
-            <option value="estudo" >Estudo</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Estudo" >Estudo</option>
           </select>
 
           <input type="date" placeholder="Data" value={data} onChange={(event) => setData(event.target.value)} />
@@ -82,17 +125,17 @@ const Home = () => {
         <h2>Minhas Tarefas</h2>
         <ul>
           {
-            tarefas.map((tarefa, index) => (
-                <li key={index}>
+            tarefas.map((tarefa) => (
+                <li key={tarefa.id}>
                   <div className='itens-left'>
-                    <h4>{tarefa.title}</h4>
+                    <h4>{tarefa.title} - {tarefa.id}</h4>
                     <p>{tarefa.category}</p>
                     <p>{tarefa.description}</p>
                   </div>
                   <div className='itens-right'>
                     <p>{tarefa.date}</p>
                     <div className='tarefas-buttons'>
-                      <IoCreate color="green" size={20} className='io-button' onClick={() => alert("Editando")} title='Editar' />
+                      <IoCreate color="green" size={20} className='io-button' onClick={() => preencheEstados(tarefa)} title='Editar' />
                       <IoTrashOutline color="red" size={20} className='io-button' onClick={() => alert("Apagando")} title='Apagar' />
                     </div>
                   </div>
