@@ -10,30 +10,6 @@ interface Task {
   date: string;
 }
 
-const tasks = [
-  {
-    id: "098704654",
-    title: "Tarefa 1",
-    category: "Trabalho",
-    description: "Descrição teste 1",
-    date: "2025-08-23"
-  },
-  {
-    id: "654132897",
-    title: "Tarefa 2",
-    category: "Trabalho",
-    description: "Descrição teste 2",
-    date: "2025-08-26"
-  },
-  {
-    id: "321546895",
-    title: "Tarefa 3",
-    category: "Estudo",
-    description: "Descrição teste 3",
-    date: "2025-08-10"
-  },
-]
-
 const Home = () => {
 
   const [id, setId] = useState("");
@@ -42,15 +18,19 @@ const Home = () => {
   const [data, setData] = useState("");
   const [descricao, setDescricao] = useState("");
 
-  const [tarefas, setTarefas] = useState(tasks);
+  const [tarefas, setTarefas] = useState<Task[]>([]);
 
   const [editando, setEditando] = useState(false);
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    
+
+    if(!titulo || !categoria || !data || !descricao) {
+      return
+    }
+
     if (id) {
-      editTask();
+      editarTarefa();
     } else {
       setTarefas([...tarefas,
         {
@@ -62,7 +42,7 @@ const Home = () => {
         }
       ]);
 
-      limpaFormulario();
+      limparFormulario();
     }
   };
 
@@ -75,7 +55,7 @@ const Home = () => {
     setData(tarefa.date);
   };
 
-  const editTask = () => {
+  const editarTarefa = () => {
     const posicaoArray = tarefas.findIndex((tarefa) => tarefa.id === id);
 
     const copiaTarefas = [...tarefas];
@@ -90,16 +70,22 @@ const Home = () => {
 
     setTarefas(copiaTarefas);
 
-    limpaFormulario();
+    limparFormulario();
   };
 
-  const limpaFormulario = () => {
+  const limparFormulario = () => {
     setEditando(false);
     setId("");
     setTitulo("");
     setCategoria("");
     setDescricao("");
     setData("");
+  }
+
+  const apagarTarefa = (id: string) => {
+    const arrayFiltrado = tarefas.filter((tarefa) => tarefa.id !== id);
+
+    setTarefas(arrayFiltrado);
   }
 
   return (
@@ -123,6 +109,8 @@ const Home = () => {
       </div>
       <div className='container-tarefas'>
         <h2>Minhas Tarefas</h2>
+        <p>Total: {tarefas.length}</p>
+        <h4>{tarefas.length < 1 && "Nenhuma tarefa cadastrada"}</h4>
         <ul>
           {
             tarefas.map((tarefa) => (
@@ -136,7 +124,7 @@ const Home = () => {
                     <p>{tarefa.date}</p>
                     <div className='tarefas-buttons'>
                       <IoCreate color="green" size={20} className='io-button' onClick={() => preencheEstados(tarefa)} title='Editar' />
-                      <IoTrashOutline color="red" size={20} className='io-button' onClick={() => alert("Apagando")} title='Apagar' />
+                      <IoTrashOutline color="red" size={20} className='io-button' onClick={() => apagarTarefa(tarefa.id)} title='Apagar' />
                     </div>
                   </div>
                 </li>

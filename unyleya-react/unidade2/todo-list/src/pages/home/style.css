@@ -1,6 +1,7 @@
 .container-home {
   display: flex;
   min-height: 100dvh;
+  user-select: none;
 }
 
 .container-home .container-form {
@@ -26,7 +27,7 @@
   color: #232323;
 }
 
-.container-home .container-form form h2 {
+.container-form form h2 {
   font-size: 18px;
   text-align: center;
 }
@@ -42,10 +43,16 @@
   padding: 0 4px;
   outline: none;
   color: #232323;
+  padding-top: 8px;
 }
 
-.container-home .container-form form select:focus,
-.container-home .container-form form select:active {
+.container-form form select:hover,
+.container-form form input[type="date"]:hover {
+  cursor: pointer;
+}
+
+.container-form form select:focus,
+.container-form form select:active {
   color: #232323;
 }
 
@@ -56,6 +63,7 @@
   color: #f6f6f6;
   letter-spacing: 0.3mm;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .container-tarefas {
@@ -64,16 +72,26 @@
 }
 
 .container-tarefas h2 {
-  margin: 32px 0;
+  display: inline-flex;
+  width: 30%;
+  margin-top: 32px;
   font-size: 20px;
 }
+
+.container-tarefas > p {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 65%;
+  margin-bottom: 32px;
+  color: #898989;
+}
+
 
 .container-tarefas ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: center;
-
 }
 
 .container-tarefas ul li {
