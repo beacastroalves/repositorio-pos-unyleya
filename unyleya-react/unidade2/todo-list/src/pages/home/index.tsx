@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import { IoTrashOutline, IoCreate } from 'react-icons/io5';
 
@@ -11,7 +11,6 @@ interface Task {
 }
 
 const Home = () => {
-
   const [id, setId] = useState("");
   const [titulo, setTitulo] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -19,6 +18,13 @@ const Home = () => {
   const [descricao, setDescricao] = useState("");
 
   const [tarefas, setTarefas] = useState<Task[]>([]);
+
+  useEffect(() => {
+    const tasksSalvas = localStorage.getItem("@tasks");
+    if(tasksSalvas) {
+      setTarefas(JSON.parse(tasksSalvas));
+    }
+  }, []);
 
   const [editando, setEditando] = useState(false);
 
@@ -41,6 +47,20 @@ const Home = () => {
           description: descricao
         }
       ]);
+
+      localStorage.setItem(
+        "@tasks",
+        JSON.stringify([
+          ...tarefas,
+          {
+            id: String(Date.now()),
+            title: titulo,
+            category: categoria,
+            date: data,
+            description: descricao
+          },
+        ])
+      );
 
       limparFormulario();
     }
@@ -70,6 +90,8 @@ const Home = () => {
 
     setTarefas(copiaTarefas);
 
+    localStorage.setItem("@tasks", JSON.stringify(copiaTarefas));
+
     limparFormulario();
   };
 
@@ -86,6 +108,8 @@ const Home = () => {
     const arrayFiltrado = tarefas.filter((tarefa) => tarefa.id !== id);
 
     setTarefas(arrayFiltrado);
+
+    localStorage.setItem("@tasks", JSON.stringify(arrayFiltrado));
   }
 
   return (
