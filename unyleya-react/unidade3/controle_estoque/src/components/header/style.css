@@ -1,0 +1,27 @@
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #f9ca24;
+  user-select: none;
+  color: #323232;
+}
+
+.container-header ul {
+  display: flex;
+  gap: 8px;
+}
+
+.container-header ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.container-header ul li:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #f6f6f6;
+  transition: background-color 0.35s;
+}
