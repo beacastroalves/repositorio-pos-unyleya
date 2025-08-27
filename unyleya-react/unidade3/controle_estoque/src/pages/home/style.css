@@ -37,3 +37,84 @@
   transform: translate(1px, 1px);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
+
+h3 {
+  text-align: center;
+  padding: 16px;
+  font-family: 'Poppins';
+}
+
+.form-cadastro {
+  width: 500px;
+  padding: 16px;
+}
+
+.form-cadastro input,
+.form-cadastro select,
+.form-cadastro textarea {
+  font-size: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  width: 100%;
+  margin: 12px 0;
+  font-family: 'Poppins';
+}
+
+.form-cadastro input:focus,
+.form-cadastro select:focus,
+.form-cadastro textarea {
+  outline: 1px solid #b9b9b9;
+}
+
+.form-cadastro input:nth-child(2),
+.form-cadastro select {
+  display: inline-flex;
+  width: 48%;
+}
+
+.form-cadastro select {
+  margin-left: 18px;
+  cursor: pointer;
+}
+
+.form-cadastro select option:first-child {
+  background: rgba(235, 235, 235, 0.7);
+}
+
+.form-cadastro select option:nth-child(2),
+.form-cadastro select option:nth-child(3),
+.form-cadastro select option:nth-child(4) {
+  background: rgba(249, 203, 36, 0.7);
+}
+
+
+
+.form-cadastro .buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.form-cadastro .buttons button {
+  padding: 16px 48px;
+  border: none;
+  background-color: #f9ca24;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins';
+}
+
+.form-cadastro .buttons button:last-of-type {
+  background-color: #fff;
+  color: #f9ca24;
+  border: 1px solid #f9ca24;
+}
+
+.form-cadastro .buttons button:last-of-type:hover {
+  background-color: rgba(249, 203, 36, 0.3);
+}
