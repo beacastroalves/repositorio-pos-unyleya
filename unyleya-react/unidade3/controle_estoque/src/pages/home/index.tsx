@@ -1,6 +1,8 @@
+import axios from "axios";
 import Card from "../../components/card";
 import Header from "../../components/header";
 import './style.css';
+import { useEffect } from "react";
 
 const products = [
   {
@@ -48,6 +50,19 @@ const products = [
 ]
 
 const Home = () => {
+
+  const getProducts = async () => {
+    const response = await axios.get(
+      "https://api-produtos-unyleya.vercel.app/produtos"
+    );
+
+    console.log(response);
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <div className="container-home">
       <Header />
