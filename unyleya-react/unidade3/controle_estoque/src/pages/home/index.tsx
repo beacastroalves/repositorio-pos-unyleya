@@ -3,51 +3,7 @@ import Card from "../../components/card";
 import Header from "../../components/header";
 import './style.css';
 import { useEffect, useState } from "react";
-
-// const products = [
-//   {
-//     id: "12",
-//     name: "Echo Dot (8ª Geração)",
-//     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meliuz.com.br%2Fblog%2Fwp-content%2Fuploads%2F2023%2F05%2F7-1.jpg&f=1&nofb=1&ipt=becd165f22745b5a9c7e3592cf0ed062f36515e848bae193de11a9627d090793",
-//     price: 799,
-//     brand: "Amazon",
-//   },
-//   {
-//     id: "13",
-//     name: "Echo Dot (8ª Geração)",
-//     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meliuz.com.br%2Fblog%2Fwp-content%2Fuploads%2F2023%2F05%2F7-1.jpg&f=1&nofb=1&ipt=becd165f22745b5a9c7e3592cf0ed062f36515e848bae193de11a9627d090793",
-//     price: 799,
-//     brand: "Amazon",
-//   },
-//   {
-//     id: "14",
-//     name: "Echo Dot (8ª Geração)",
-//     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meliuz.com.br%2Fblog%2Fwp-content%2Fuploads%2F2023%2F05%2F7-1.jpg&f=1&nofb=1&ipt=becd165f22745b5a9c7e3592cf0ed062f36515e848bae193de11a9627d090793",
-//     price: 799,
-//     brand: "Amazon",
-//   },
-//   {
-//     id: "15",
-//     name: "Echo Dot (8ª Geração)",
-//     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meliuz.com.br%2Fblog%2Fwp-content%2Fuploads%2F2023%2F05%2F7-1.jpg&f=1&nofb=1&ipt=becd165f22745b5a9c7e3592cf0ed062f36515e848bae193de11a9627d090793",
-//     price: 799,
-//     brand: "Amazon",
-//   },
-//   {
-//     id: "16",
-//     name: "Echo Dot (8ª Geração)",
-//     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meliuz.com.br%2Fblog%2Fwp-content%2Fuploads%2F2023%2F05%2F7-1.jpg&f=1&nofb=1&ipt=becd165f22745b5a9c7e3592cf0ed062f36515e848bae193de11a9627d090793",
-//     price: 799,
-//     brand: "Amazon",
-//   },
-//   {
-//     id: "17",
-//     name: "Echo Dot (8ª Geração)",
-//     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meliuz.com.br%2Fblog%2Fwp-content%2Fuploads%2F2023%2F05%2F7-1.jpg&f=1&nofb=1&ipt=becd165f22745b5a9c7e3592cf0ed062f36515e848bae193de11a9627d090793",
-//     price: 799,
-//     brand: "Amazon",
-//   },
-// ]
+import Modal from 'react-modal';
 
 interface Produto {
   _id: string;
@@ -58,9 +14,30 @@ interface Produto {
   fornecedor: string;
 }
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  }
+};
+
+Modal.setAppElement('#root');
+
 const Home = () => {
 
   const [produtos, setProdutos] = useState<Produto[]>([]);
+
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const [nome, setNome] = useState("");
+  const [preco, setPreco] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [fornecedor, setFornecedor] = useState("");
+  const [urlImagem, setUrlImagem] = useState("");
 
   const getProducts = async () => {
     const response = await axios.get(
@@ -94,7 +71,35 @@ const Home = () => {
         })
       }
       </div>
-      <button className="float-button">+</button>
+      <button className="float-button" onClick={() => setIsOpenModal(true)}>+</button>
+
+      <Modal
+        style={customStyles}
+        isOpen={isOpenModal}
+        onRequestClose={() => setIsOpenModal(false)}
+      >
+        <h3>Cadastrar Produto</h3>
+
+        <form className="form-cadastro">
+          <input type="text" placeholder="Nome do Produto" value={nome} onChange={(event) => setNome(event.target.value)} />
+
+          <input type="text" placeholder="Preço" value={preco} onChange={(event) => setPreco(event.target.value)} />
+
+          <select value={fornecedor} onChange={(event) => setFornecedor(event.target.value)} >
+            <option value="" disabled>Fornecedor</option>
+            <option value="Fornecedor 1">Fornecedor 1</option>
+            <option value="Fornecedor 2">Fornecedor 2</option>
+            <option value="Fornecedor 3">Fornecedor 3</option>
+          </select>
+
+          <input type="text" placeholder="URL da imagem" value={urlImagem} onChange={(event) => setUrlImagem(event.target.value)} />
+          <textarea placeholder="Descrição" value={descricao} onChange={(event) => setDescricao(event.target.value)} />
+          <div className="buttons">
+            <button>Salvar</button>
+            <button onClick={() => setIsOpenModal(false)}>Cancelar</button>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 };
