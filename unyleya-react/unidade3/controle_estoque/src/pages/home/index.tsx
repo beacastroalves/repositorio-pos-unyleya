@@ -40,12 +40,45 @@ const Home = () => {
   const [urlImagem, setUrlImagem] = useState("");
 
   const getProducts = async () => {
-    const response = await axios.get(
-      "https://api-produtos-unyleya.vercel.app/produtos"
-    );
+    try {
+      const response = await axios.get(
+        "https://api-produtos-unyleya.vercel.app/produtos"
+      );
 
-    setProdutos(response.data);
+      setProdutos(response.data);
+    } catch (error) {
+      alert("Erro ao buscar os produtos " + error);
+    }
+
   };
+
+  const limparFormulario = () => {
+    setNome("");
+    setPreco("");
+    setDescricao("");
+    setFornecedor("");
+    setUrlImagem("");
+  }
+
+  const saveProduct = async (event:React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    try {
+      await axios.post('https://api-produtos-unyleya.vercel.app/produtos', {
+        "nome": nome,
+        "preco": preco,
+        "fornecedor": fornecedor,
+        "url_imagem": urlImagem,
+        "descricao": descricao
+      });
+      getProducts();
+      limparFormulario();
+      setIsOpenModal(false);
+      alert("Produto cadastrado com sucesso!");
+    } catch (error) {
+      alert("Houve um erro ao cadastrar o produto " + error);
+    }
+  }
 
   useEffect(() => {
     getProducts();
@@ -80,7 +113,7 @@ const Home = () => {
       >
         <h3>Cadastrar Produto</h3>
 
-        <form className="form-cadastro">
+        <form className="form-cadastro" onSubmit={saveProduct}>
           <input type="text" placeholder="Nome do Produto" value={nome} onChange={(event) => setNome(event.target.value)} />
 
           <input type="text" placeholder="Preço" value={preco} onChange={(event) => setPreco(event.target.value)} />
@@ -95,7 +128,7 @@ const Home = () => {
           <input type="text" placeholder="URL da imagem" value={urlImagem} onChange={(event) => setUrlImagem(event.target.value)} />
           <textarea placeholder="Descrição" value={descricao} onChange={(event) => setDescricao(event.target.value)} />
           <div className="buttons">
-            <button>Salvar</button>
+            <button type="submit">Salvar</button>
             <button onClick={() => setIsOpenModal(false)}>Cancelar</button>
           </div>
         </form>
