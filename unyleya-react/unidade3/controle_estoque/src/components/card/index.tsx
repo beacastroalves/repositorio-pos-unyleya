@@ -1,19 +1,19 @@
 import './style.css';
 
 interface CardProps {
-  name: string;
-  img: string;
-  brand: string;
-  price: number;
+  nome: string;
+  url_imagem: string;
+  fornecedor: string;
+  preco: string;
 }
 
 const Card = (props: CardProps) => {
   return (
     <div className="card">
-      <h3>{props.name}</h3>
-      <img src={props.img} alt="" />
-      <p>{props.brand}</p>
-      <p>R$ {props.price}</p>
+      <h3>{props.nome}</h3>
+      <img src={props.url_imagem} alt="" />
+      <p>{props.fornecedor}</p>
+      <p>R$ {props.preco}</p>
     </div>
   );
 };
