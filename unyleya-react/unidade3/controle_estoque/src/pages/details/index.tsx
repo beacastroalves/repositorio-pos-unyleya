@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import type { Produto } from "../home";
 import Header from "../../components/header";
 import Modal from 'react-modal';
@@ -21,10 +21,12 @@ Modal.setAppElement('#root');
 
 const Details = () => {
   const params = useParams();
+  const navigate = useNavigate();
 
   const [product, setProduct] = useState<Produto>({} as Produto);
 
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isOpenDeleteModal, setIsOpenDeleteModal] = useState(false);
 
   const [nome, setNome] = useState("");
   const [preco, setPreco] = useState("");
@@ -38,7 +40,7 @@ const Details = () => {
     setDescricao("");
     setFornecedor("");
     setUrlImagem("");
-  }
+  };
 
   const getDetailsProduct = async () => {
     try {
@@ -74,7 +76,18 @@ const Details = () => {
     } catch (error) {
       alert("Erro ao tentar editar o produto " + error);
     }
-  }
+  };
+
+  const deleteProduct = async () => {
+    try {
+      await axios.delete(`https://api-produtos-unyleya.vercel.app/produtos/${params.id}`);
+      alert("Produto excluído!");
+      setIsOpenModal(false);
+      navigate("/");
+    } catch (error) {
+      alert("Erro ao tentar excluir o produto " + error)
+    }
+  };
 
   return (
     <div>
@@ -90,7 +103,7 @@ const Details = () => {
             setUrlImagem(product.url_imagem);
             setPreco(product.preco);
           }}>Editar</button>
-          <button>Apagar</button>
+          <button onClick={() => setIsOpenDeleteModal(true)}>Apagar</button>
         </div>
         <img src={product.url_imagem} />
         <p>{product.fornecedor}</p>
@@ -123,6 +136,17 @@ const Details = () => {
               <button onClick={() => setIsOpenModal(false)}>Cancelar</button>
             </div>
           </form>
+        </Modal>
+
+        <Modal
+          style={customStyles}
+          isOpen={isOpenDeleteModal}
+          onRequestClose={() => setIsOpenDeleteModal(false)}
+        >
+          <h3>Confirmar Exclusão</h3>
+          <p>Deseja realmente excluir o produto: "{`${product.nome}`}"?</p>
+          <button onClick={deleteProduct}>Excluir</button>
+          <button onClick={() => setIsOpenDeleteModal(false)}>Não</button>
         </Modal>
       </div>
     </div>
