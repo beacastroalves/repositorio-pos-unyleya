@@ -6,9 +6,8 @@ const Header = () => {
     <div className='container-header'>
       <h1>UnyProducts</h1>
       <ul>
-        <li><Link to={`/`} className='link-header'>Products</Link></li>
-        <li> Quem somos</li>
-        <li>Sair</li>
+        <li><Link to={`/`} className='link-header'>Produtos</Link></li>
+        <li><Link to={`/quem-somos`} className='link-header'>Quem somos</Link></li>
       </ul>
     </div>
   );

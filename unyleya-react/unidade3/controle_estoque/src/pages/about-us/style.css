@@ -1,0 +1,72 @@
+.container-about {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px;
+  font-family: 'Poppins', sans-serif;
+  color: #323232;
+  line-height: 1.6;
+  background-color: #f6f6f6;
+  border-radius: 16px;
+  box-shadow: 2px 2px 16px -3px rgba(0, 0, 0, 0.2);
+}
+
+.container-about h1,
+.container-about h2 {
+  color: #f9ca24;
+  text-align: center;
+}
+
+.container-about h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid #f9ca24;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+.container-about h2 {
+  max-width: 700px;
+  font-size: 1.8rem;
+  margin: 64px auto 16px;
+  border-left: 8px solid #f9ca24;
+  border-right: 8px solid #f9ca24;
+}
+
+.container-about p {
+  max-width: 700px;
+  text-align: justify;
+  padding: 0 16px;
+  margin: 0 auto;
+  font-size: 1rem;
+  text-indent: 2rem;
+}
+
+.container-about p:last-of-type {
+  text-indent: 0;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.container-about ul {
+  max-width: 700px;
+  list-style: none;
+  margin: 16px auto;
+  margin-bottom: 40px;
+}
+
+.container-about li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 32px;
+}
+
+.container-about li::before {
+  content: "💡"; /* Um ícone para os itens da lista */
+  position: absolute;
+  left: 0;
+  color: #f9ca24;
+  font-size: 1.2rem;
+}
+
+.container-about strong {
+  color: #323232;
+}

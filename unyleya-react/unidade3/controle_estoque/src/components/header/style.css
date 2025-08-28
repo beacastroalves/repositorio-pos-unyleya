@@ -10,26 +10,24 @@
 
 .container-header ul {
   display: flex;
+  list-style: none;
   gap: 8px;
 }
 
-.container-header ul li {
-  list-style: none;
+.container-header ul li .link-header {
   cursor: pointer;
   padding: 4px 8px;
+  text-decoration: none;
   border-radius: 4px;
+  color: #323232;
 }
 
-.container-header ul li:hover {
+.container-header ul li .link-header:hover {
   background-color: rgba(0, 0, 0, 0.55);
   color: #f6f6f6;
   transition: background-color 0.35s;
 }
 
-.container-header .link-header {
-  color: #323232;
-  text-decoration: none;
-}
 
 .container-header .link-header:hover {
   color: #f6f6f6;
