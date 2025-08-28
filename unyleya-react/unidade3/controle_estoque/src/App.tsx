@@ -1,3 +1,4 @@
+import Details from './pages/details';
 import Home from './pages/home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -7,6 +8,10 @@ const App = () => {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/details/:id",
+      element: <Details />,
     },
   ]);
 

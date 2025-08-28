@@ -5,7 +5,7 @@ import './style.css';
 import { useEffect, useState } from "react";
 import Modal from 'react-modal';
 
-interface Produto {
+export interface Produto {
   _id: string;
   nome: string;
   url_imagem: string;
@@ -95,6 +95,7 @@ const Home = () => {
           return (
             <Card
               key={product._id}
+              id={product._id}
               nome={product.nome}
               url_imagem={product.url_imagem}
               preco={product.preco}
