@@ -25,3 +25,12 @@
   color: #f6f6f6;
   transition: background-color 0.35s;
 }
+
+.container-header .link-header {
+  color: #323232;
+  text-decoration: none;
+}
+
+.container-header .link-header:hover {
+  color: #f6f6f6;
+}
