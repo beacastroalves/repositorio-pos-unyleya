@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import type { Produto } from "../home";
 import Header from "../../components/header";
 import Modal from 'react-modal';
+
+import { IoTrashOutline, IoPencil } from 'react-icons/io5';
 import './style.css';
 
 const customStyles = {
@@ -93,22 +95,36 @@ const Details = () => {
     <div>
       <Header />
       <div className="container-details">
-        <h1>{product.nome}</h1>
-        <div className="details-buttons">
-          <button onClick={() => {
-            setIsOpenModal(true)
-            setNome(product.nome);
-            setDescricao(product.descricao);
-            setFornecedor(product.fornecedor);
-            setUrlImagem(product.url_imagem);
-            setPreco(product.preco);
-          }}>Editar</button>
-          <button onClick={() => setIsOpenDeleteModal(true)}>Apagar</button>
+
+        <div className="details-content">
+          <h1>{product.nome}</h1>
+          <div className="details-buttons">
+            <IoPencil
+              size={42}
+              className='io-button'
+              onClick={() => {
+                setIsOpenModal(true)
+                setNome(product.nome);
+                setDescricao(product.descricao);
+                setFornecedor(product.fornecedor);
+                setUrlImagem(product.url_imagem);
+                setPreco(product.preco);
+              }} title='Editar'
+            />
+
+            <IoTrashOutline
+              size={42}
+              className='io-button'
+              onClick={() => setIsOpenDeleteModal(true)}
+              title='Apagar'
+            />
+          </div>
+          <p>{product._id}</p>
+          <p id="price-info">R$ {product.preco}</p>
+          <p id="brand-info">{product.fornecedor}</p>
+          <p>{product.descricao}</p>
         </div>
         <img src={product.url_imagem} />
-        <p>{product.fornecedor}</p>
-        <p>{product.preco}</p>
-        <p>{product.descricao}</p>
 
         <Modal
           style={customStyles}
@@ -144,9 +160,11 @@ const Details = () => {
           onRequestClose={() => setIsOpenDeleteModal(false)}
         >
           <h3>Confirmar Exclusão</h3>
-          <p>Deseja realmente excluir o produto: "{`${product.nome}`}"?</p>
-          <button onClick={deleteProduct}>Excluir</button>
-          <button onClick={() => setIsOpenDeleteModal(false)}>Não</button>
+          <p className="delete-info">Deseja realmente excluir o produto: "{`${product.nome}`}"?</p>
+          <div className="delete-buttons">
+            <button className="modal-delete-yes" onClick={deleteProduct}>Excluir</button>
+            <button className="modal-delete-no" onClick={() => setIsOpenDeleteModal(false)}>Não</button>
+          </div>
         </Modal>
       </div>
     </div>
