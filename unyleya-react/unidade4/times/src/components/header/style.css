@@ -1,0 +1,27 @@
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #454545;
+  color: #f6f6f6;
+  padding: 16px 32px;
+}
+
+.container-header > div span,
+.container-header > div button {
+  font-size: 16px;
+}
+
+.container-header > div button {
+  background-color: transparent;
+  border: none;
+  color: #f6f6f6;
+  margin-left: 8px;
+  padding: 4px 16px;
+}
+
+.container-header > div button:hover {
+  cursor: pointer;
+  background-color: #555;
+  transition: 0.35s;
+}

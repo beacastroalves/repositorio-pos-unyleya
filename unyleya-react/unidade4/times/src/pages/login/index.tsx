@@ -2,10 +2,18 @@ import { useState } from 'react';
 import './style.css';
 // import api from '../../services/api';
 import { useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+
+// interface ResponseData {
+//   email: string;
+//   name: string;
+//   token: string;
+// }
 
 const Login = () => {
 
   const navigate = useNavigate();
+  const {setUsername} = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,11 +22,13 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      // const response = await api.post("/auth", {
+      // const response = await api.post<ResponseData>("/auth", {
       //   email: email,
       //   password: password,
       // });
       navigate("/times");
+      setUsername("Bia Castro");
+      // setUsername(response.data.name);
       // console.log(response);
     } catch (error) {
       alert("Usuario nao encontrado " + error)
