@@ -1,15 +1,29 @@
 import { useState } from 'react';
 import './style.css';
+// import api from '../../services/api';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const logar = (event: React.FormEvent<HTMLFormElement>) => {
+  const logar = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert("logado");
-  }
+
+    try {
+      // const response = await api.post("/auth", {
+      //   email: email,
+      //   password: password,
+      // });
+      navigate("/times");
+      // console.log(response);
+    } catch (error) {
+      alert("Usuario nao encontrado " + error)
+    }
+  };
 
   return (
     <div className='container-login'>
