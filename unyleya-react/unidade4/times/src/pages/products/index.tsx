@@ -1,18 +1,10 @@
-import { Link, useParams } from "react-router-dom";
-import Header from "../../components/header";
-import api from "../../services/api";
-import { useEffect, useState } from "react";
-import useAuth from "../../hooks/useAuth";
-
-interface DataProducts {
-  available: boolean;
-  categoryId: string;
-  description: string;
-  name: string;
-  price: number;
-  urlImage: string;
-  _id: string;
-}
+import { Link, useParams } from 'react-router-dom';
+import Header from '../../components/header';
+import api from '../../services/api';
+import { useEffect, useState } from 'react';
+import useAuth from '../../hooks/useAuth';
+import type { ProductOverviewResponse } from '../../models/product.model';
+import './style.css';
 
 const Products = () => {
 
@@ -20,18 +12,18 @@ const Products = () => {
 
   const { token } = useAuth();
 
-  const [products, setProducts] = useState<DataProducts[]>([]);
+  const [products, setProducts] = useState<ProductOverviewResponse[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const getProducts = async () => {
     try {
-      const response = await api.get<DataProducts[]>(`/products/${id}`, {
-        headers: { "Authorization": token }
+      const response = await api.get<ProductOverviewResponse[]>(`/products/${id}`, {
+        headers: { 'Authorization': token }
       });
       setProducts(response.data);
     } catch (error) {
       if (token) {
-        alert("Erro ao encontrar os produtos " + error);
+        alert('Erro ao encontrar os produtos ' + error);
       }
     } finally {
       setIsLoading(false);
@@ -43,23 +35,23 @@ const Products = () => {
   }, [])
 
   return (
-    <div>
+    <div className='container-products'>
       <Header />
-      <h1>Produtos do time</h1>
-
-      { isLoading && <h3>Carregando...</h3>}
-      { products.length < 1 && !isLoading && <h1>Nenhum produto do time foi encontrado</h1> }
-      {
-        products.map((product) => (
-          <Link to={`/details/${product._id}`}>
-            <div>
-              <p>{product.name}</p>
-              <p>{product.price}</p>
-              <img src={product.urlImage} alt={`Imagem do produto ${product.name}`} />
-            </div>
-          </Link>
-        ))
-      }
+      <div className="content-products">
+        { isLoading && <h3>Carregando...</h3>}
+        { products.length < 1 && !isLoading && <h1>Nenhum produto do time foi encontrado</h1> }
+        {
+          products.map((product) => (
+            <Link to={`/details/${product._id}`} key={product._id} className='product-content'>
+              <div className='product-item'>
+                <p>{product.name}</p>
+                <p>R$ {product.price}</p>
+                <img src={product.urlImage} alt={`Imagem do produto ${product.name}`} />
+              </div>
+            </Link>
+          ))
+        }
+      </div>
     </div>
   )
 };

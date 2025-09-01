@@ -1,0 +1,38 @@
+.container-times {
+  background-color: #353535;
+  padding: 48px 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100dvw;
+}
+
+.container-times .container-time {
+  text-decoration: none;
+}
+
+.container-times .container-time .content-time {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+
+  background-color: #454545;
+  color: #f6f6f6;
+  max-width: 180px;
+  height: 280px;
+  border-radius: 16px;
+}
+
+.container-times .container-time .content-time img {
+  width: 100%;
+  min-height: 180px;
+  object-fit: contain;
+}
+
+.container-times .container-time .content-time p {
+  text-align: center;
+  font-weight: 600;
+}

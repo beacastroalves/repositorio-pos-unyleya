@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './style.css';
 
@@ -13,7 +13,9 @@ const Header = () => {
 
   return (
     <div className='container-header'>
-      <h1>Unytimes</h1>
+      <Link to="/times">
+        <h1>Unytimes</h1>
+      </Link>
       <div>
         <span>Olá, { username }</span>
         <button onClick={handleLogout}>Sair</button>

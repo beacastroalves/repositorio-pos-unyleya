@@ -1,0 +1,35 @@
+.container-products {
+  height: 100dvh;
+  background-color: #353535;
+}
+
+.content-products {
+  background-color: #353535;
+  height: calc(100dvh - 80px);
+  width: 100dvw;
+  padding: 48px 64px;
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+
+  background-color: #454545;
+  color: #f6f6f6;
+  max-width: 180px;
+  height: 280px;
+  border-radius: 16px;
+}
+
+.product-item img {
+  width: 100%;
+  min-height: 132px;
+  object-fit: contain;
+}

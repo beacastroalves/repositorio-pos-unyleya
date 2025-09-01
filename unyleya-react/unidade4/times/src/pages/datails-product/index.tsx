@@ -1,34 +1,28 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
-import api from "../../services/api";
-import Header from "../../components/header";
-
-interface DataProduct {
-  description: string;
-  name: string;
-  price: number;
-  urlImage: string;
-  _id: string;
-}
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import api from '../../services/api';
+import Header from '../../components/header';
+import type { ProductOverviewResponse } from '../../models/product.model';
+import './style.css';
 
 const DetailsProduct = () => {
   const { id } = useParams();
   const { token } = useAuth();
   const navigate = useNavigate();
 
-  const [product, setProduct] = useState<DataProduct>({} as DataProduct);
+  const [product, setProduct] = useState<ProductOverviewResponse>({} as ProductOverviewResponse);
   const [isLoading, setIsLoading] = useState(true);
 
   const getProducts = async () => {
   try {
-    const response = await api.get<DataProduct>(`/product/${id}`, {
-      headers: { "Authorization": token }
+    const response = await api.get<ProductOverviewResponse>(`/product/${id}`, {
+      headers: { 'Authorization': token }
     });
     setProduct(response.data);
   } catch (error) {
     if (token) {
-      alert("Erro ao encontrar os produtos " + error);
+      alert('Erro ao encontrar os produtos ' + error);
     }
   } finally {
     setIsLoading(false);
@@ -41,15 +35,24 @@ const DetailsProduct = () => {
 
   useEffect(() => {
     if(!token) {
-      navigate("/");
+      navigate('/');
     }
   }, []);
 
   return (
-    <div>
+    <div className='container-details'>
       <Header />
       { !product && !isLoading && <h1>Nenhum produto do time selecionado foi encontrado</h1> }
-      <h3>{product.name}</h3>
+      <div className="content-details">
+        <img src={product.urlImage} alt={`imagem do produto ${product.name}`} />
+        <div className="item-details">
+          <h3>{product.name}</h3>
+          <small>{product.categoryId}</small>
+          <p>R$ {product.price}</p>
+          <p>Descrição</p>
+          <p>{product.description}</p>
+        </div>
+      </div>
     </div>
   );
 };

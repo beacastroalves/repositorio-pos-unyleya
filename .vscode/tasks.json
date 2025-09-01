@@ -1,0 +1,15 @@
+{
+  "tasks": [
+    {
+      "label": "Rodar programa",
+      "type": "shell",
+      "command": "npm",
+      "args": [
+        "run", "dev"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/unyleya-react/unidade4/times"
+      }
+    }
+  ]
+}
