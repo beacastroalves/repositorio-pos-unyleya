@@ -5,6 +5,8 @@ import {
 import Login from "./pages/login";
 import Times from "./pages/times";
 import Products from "./pages/products";
+import DetailsProduct from "./pages/datails-product";
+import NotFoundPage from "./pages/not-found";
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
   {
     path: '/products/:id',
     element: <Products />
+  },
+  {
+    path: '/details/:id',
+    element: <DetailsProduct />
+  },
+  {
+    path: '/*',
+    element: <NotFoundPage />
   }
 ]);
 

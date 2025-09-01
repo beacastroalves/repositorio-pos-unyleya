@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../../components/header";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
@@ -25,11 +25,8 @@ const Products = () => {
 
   const getProducts = async () => {
     try {
-      const response = await api.get<DataProducts[]>(`/products/${id}`,
-        {
-          headers: {
-            "Authorization": token
-          }
+      const response = await api.get<DataProducts[]>(`/products/${id}`, {
+        headers: { "Authorization": token }
       });
       setProducts(response.data);
     } catch (error) {
@@ -54,11 +51,13 @@ const Products = () => {
       { products.length < 1 && !isLoading && <h1>Nenhum produto do time foi encontrado</h1> }
       {
         products.map((product) => (
-          <div>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
-            <img src={product.urlImage} alt={`Imagem do produto ${product.name}`} />
-          </div>
+          <Link to={`/details/${product._id}`}>
+            <div>
+              <p>{product.name}</p>
+              <p>{product.price}</p>
+              <img src={product.urlImage} alt={`Imagem do produto ${product.name}`} />
+            </div>
+          </Link>
         ))
       }
     </div>
