@@ -1,0 +1,28 @@
+.container-card-product {
+  padding: 24px;
+  width: 250px;
+  height: 300px;
+  border-radius: 16px;
+  border: 3px solid #f2b925;
+  background-color: #6ce5f0;
+  margin: 16px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  box-shadow: 8px 8px 0px #f4356f;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.container-card-product img {
+  width: 100%;
+}
+
+.container-card-product p {
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
