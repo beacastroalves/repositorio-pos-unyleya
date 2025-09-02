@@ -1,0 +1,35 @@
+.container-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4356f;
+  color: #f6f6f6;
+  padding: 0 32px;
+}
+
+.container-header .header-left,
+.container-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.container-header .header-left img {
+  height: 80px;
+  width: fit-content;
+}
+
+.container-header .header-right button {
+  padding: 8px 32px;
+  border: none;
+  background-color: #c32a58;
+  color: #f6f6f6;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.container-header .header-right button:hover {
+  background-color: #b12750;
+  transition: 0.35s;
+}
