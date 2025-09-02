@@ -1,12 +1,15 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import ProductList from "./pages/product-list";
-// import Login from "./pages/login";
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import Login from './pages/login';
+import ProductList from './pages/product-list';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
+    element: <Login />
+  },
+  {
+    path: '/products',
     element: <ProductList />
-    // element: <Login />
   }
 ])
 

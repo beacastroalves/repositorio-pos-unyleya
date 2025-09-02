@@ -16,9 +16,19 @@
   gap: 24px;
   padding: 48px 32px;
   width: 400px;
-  border: 1px solid #f4356f;
+  border: 4px solid #f4356f;
   border-radius: 8px;
   color: #f6f6f6;
+  background-color: #6ce5f0;
+  box-shadow: 16px 16px 1px #f4b336;
+}
+
+.container-login .content-login form input {
+  outline: 2px solid transparent;
+}
+
+.container-login .content-login form input:focus {
+  outline-color: #f4b336;
 }
 
 .container-login .content-login form input,
@@ -53,12 +63,10 @@
   }
 }
 
-
 .container-login .content-login form button {
   margin-top: 24px;
   cursor: pointer;
 }
-
 
 .container-login .content-login form button:hover {
   background-color: #771a36;
