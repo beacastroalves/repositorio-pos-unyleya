@@ -8,7 +8,7 @@
         "run", "dev"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/unyleya-react/unidade4/times"
+        "cwd": "${workspaceFolder}/unyleya-react/unidade4/tarefa-final-react"
       }
     }
   ]
