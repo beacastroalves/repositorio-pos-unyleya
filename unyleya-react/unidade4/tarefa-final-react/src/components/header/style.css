@@ -6,6 +6,7 @@
   background-color: #f4356f;
   color: #f6f6f6;
   padding: 0 32px;
+  user-select: none;
 }
 
 .container-header .header-left,
@@ -21,15 +22,24 @@
 }
 
 .container-header .header-right button {
-  padding: 8px 32px;
+  padding: 16px 32px;
   border: none;
   background-color: #c32a58;
   color: #f6f6f6;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: 2px 4px 1px transparent;
 }
 
 .container-header .header-right button:hover {
-  background-color: #b12750;
+  background-color: #c32a58;
   transition: 0.35s;
+  border-color: #0d0d0d;
+  box-shadow: 2px 4px 1px #0d0d0d;
+}
+
+.container-header .header-right button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 2px 1px #0d0d0d;
 }

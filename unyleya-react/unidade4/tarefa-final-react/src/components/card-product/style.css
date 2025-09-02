@@ -3,20 +3,22 @@
   width: 250px;
   height: 300px;
   border-radius: 16px;
-  border: 3px solid #f2b925;
+  border: 3px solid #f4b336;
   background-color: #6ce5f0;
   margin: 16px;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  margin-right: 32px;
+  margin-bottom: 32px;
   box-shadow: 8px 8px 0px #f4356f;
+  transition: 0.1s;
 
   display: flex;
   flex-direction: column;
   gap: 24px;
   text-align: center;
   text-decoration: none;
+  user-select: none;
+  cursor: pointer;
 }
-
 
 .container-card-product img {
   width: 100%;
@@ -25,4 +27,15 @@
 .container-card-product p {
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.container-card-product:hover {
+  box-shadow: 16px 16px 0px #d82e61;
+  transition: 0.6s;
+}
+
+.container-card-product:active {
+  transform: translate(4px,4px);
+  box-shadow: 4px 4px 0px #d82e61;
+  transition: 0.6s;
 }

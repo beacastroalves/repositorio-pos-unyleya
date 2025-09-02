@@ -1,12 +1,21 @@
 import { useState } from 'react';
-import Header from '../../components/header';
+import image from '../../assets/images/loojiinhaRCT.png';
 import './style.css';
 import api from '../../services/api';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
+
+interface ResponseAuthLogin {
+  firstName: string;
+  lastName: string;
+  email: string;
+  accessToken: string;
+}
 
 const Login = () => {
 
   const navigate = useNavigate();
+  const { setFirstName, setLastName} = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,12 +24,15 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await api.post("/auth/login", {
+      const response = await api.post<ResponseAuthLogin>("/auth/login", {
       username: username,
 	    password: password,
 	    expiresInMins: 60
     });
-    navigate('/products')
+    setFirstName(response.data.firstName);
+    setLastName(response.data.lastName);
+    console.log(response)
+    navigate('/products');
     console.log(response);
     } catch (error) {
       alert("Erro ao logar " + error);
@@ -29,7 +41,9 @@ const Login = () => {
 
   return (
     <div className='container-login'>
-      <Header />
+      <div className="login-header">
+        <img src={image} alt="" />
+      </div>
       <div className='content-login'>
         <form onSubmit={logar}>
           <input type='text' placeholder='Informe seu username' value={username} onChange={(event) => setUsername(event.target.value)} />

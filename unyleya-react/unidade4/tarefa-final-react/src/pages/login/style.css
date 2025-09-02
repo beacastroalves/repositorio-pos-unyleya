@@ -3,11 +3,33 @@
   user-select: none;
 }
 
-.container-login .content-login {
-  height: calc(100vh - 80px);
+.container-login .login-header {
+  height: 150px;
+  padding: 8px 16px;
+  background-color: #f4356f;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container-login .login-header img {
+  width: fit-content;
+  height: 120px;
+  padding: 8px 32px;
+  background-color: #f4356f;
+  border-radius: 50%;
+  border: 1px solid #0d0d0d;
+  box-shadow: 4px 8px 1px #0d0d0d;
+  transform: translateY(-4px);
+}
+
+.container-login .content-login {
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .container-login .content-login form {
