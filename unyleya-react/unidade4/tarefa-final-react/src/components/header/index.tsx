@@ -11,6 +11,7 @@ const Header = () => {
 
   const logout = () => {
     setUser(null);
+    navigate('/');
   }
 
   const login = () => {
