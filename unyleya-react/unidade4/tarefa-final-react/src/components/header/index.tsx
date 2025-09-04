@@ -9,6 +9,14 @@ const Header = () => {
   const { user, setUser } = useAuth();
   const navigate = useNavigate();
 
+  const logout = () => {
+    setUser(null);
+  }
+
+  const login = () => {
+    navigate('/login');
+  }
+
   return (
     <div className='container-header'>
       <div className='header-left'>
@@ -20,17 +28,13 @@ const Header = () => {
         {
           user && <>
             <span>Olá, <strong>{`${user.firstName} ${user.lastName}`}</strong></span>
-            <button onClick={() => {
-              setUser(null);
-            }}>Sair</button>
+            <button onClick={logout}>Sair</button>
           </>
         }
         {
           !user && !window.location.href.endsWith('/login') && <>
             <span>Olá, <strong>Visitante</strong></span>
-            <button onClick={() => {
-              navigate('/login');
-            }}>Entrar</button>
+            <button onClick={login}>Entrar</button>
           </>
         }
       </div>

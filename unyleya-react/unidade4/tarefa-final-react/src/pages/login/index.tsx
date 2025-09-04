@@ -37,7 +37,6 @@ const Login = () => {
       accessToken: response.data.accessToken,
     });
     navigate('/');
-    console.log(response);
     } catch (error) {
       alert("Erro ao logar " + error);
     }
