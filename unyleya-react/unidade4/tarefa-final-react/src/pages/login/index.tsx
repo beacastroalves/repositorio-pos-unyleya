@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import image from '../../assets/images/loojiinhaRCT.png';
 import './style.css';
 import api from '../../services/api';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +7,7 @@ import { useAuth } from '../../hooks/useAuth';
 interface ResponseAuthLogin {
   firstName: string;
   lastName: string;
+  username: string;
   email: string;
   accessToken: string;
 }
@@ -15,7 +15,7 @@ interface ResponseAuthLogin {
 const Login = () => {
 
   const navigate = useNavigate();
-  const { setFirstName, setLastName} = useAuth();
+  const { setUser } = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -29,10 +29,14 @@ const Login = () => {
 	    password: password,
 	    expiresInMins: 60
     });
-    setFirstName(response.data.firstName);
-    setLastName(response.data.lastName);
-    console.log(response)
-    navigate('/products');
+    setUser({
+      firstName: response.data.firstName,
+      lastName: response.data.lastName,
+      username: response.data.username,
+      email: response.data.email,
+      accessToken: response.data.accessToken,
+    });
+    navigate('/');
     console.log(response);
     } catch (error) {
       alert("Erro ao logar " + error);
@@ -41,9 +45,7 @@ const Login = () => {
 
   return (
     <div className='container-login'>
-      <div className="login-header">
-        <img src={image} alt="" />
-      </div>
+
       <div className='content-login'>
         <form onSubmit={logar}>
           <input type='text' placeholder='Informe seu username' value={username} onChange={(event) => setUsername(event.target.value)} />

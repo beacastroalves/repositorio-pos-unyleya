@@ -1,21 +1,12 @@
-import { createBrowserRouter, RouterProvider } from 'react-router';
-import Login from './pages/login';
-import ProductList from './pages/product-list';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Login />
-  },
-  {
-    path: '/products',
-    element: <ProductList />
-  }
-])
+import { Outlet } from 'react-router-dom';
+import Header from './components/header';
 
 const App = () => {
   return (
-    <RouterProvider router={router}/>
+    <div>
+      <Header />
+      <Outlet />
+    </div>
   )
 }
 

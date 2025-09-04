@@ -1,16 +1,39 @@
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardProduct from '../../components/card-product';
-import Header from '../../components/header';
+import api from '../../services/api';
 import './style.css';
+import type { Product } from '../../models/productList.model';
+
 
 const ProductList = () => {
-  // const [] = useState();
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const getProducts = async () => {
+    try {
+      const response = await api.get<{
+        products: Product[];
+      }>('/products');
+      setProducts(response.data.products);
+    } catch (error) {
+      alert('Houve um erro ao buscar os produtos ' + error);
+    }
+  }
+
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
     <div className='container-product-list'>
-      <Header />
       <div className='content-list'>
-        <CardProduct />
+        {
+          products.map(product =>
+            <CardProduct
+              key={product.id}
+              product={product}
+            />
+          )
+        }
       </div>
     </div>
   );

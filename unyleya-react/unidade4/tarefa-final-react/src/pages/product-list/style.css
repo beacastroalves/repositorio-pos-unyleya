@@ -1,5 +1,6 @@
 .container-product-list .content-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 24px;
+  justify-content: space-evenly;
+  padding: 48px;
 }

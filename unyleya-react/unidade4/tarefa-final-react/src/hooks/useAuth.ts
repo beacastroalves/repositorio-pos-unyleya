@@ -1,21 +1,23 @@
 import { create } from 'zustand';
 
-interface State {
+interface User {
   firstName: string;
   lastName: string;
+  username: string;
   email: string;
   accessToken: string;
-  setFirstName: (novoFirstName: string) => void;
-  setLastName: (novoLastName: string) => void;
+}
+
+interface State {
+  user: User | null;
+  setUser: (user: User | null) => void;
 }
 
 export const useAuth = create<State>((set) => ({
-  firstName: 'Bia',
-  lastName: 'Castro',
-  email: "beacastro23@gmail.com",
-  accessToken: "asdasodjaoisdjaiodjneowwed",
+  user: null,
 
-  setFirstName: (novoFirstName) => set((state) => ({...state, firstName: novoFirstName})),
-  setLastName: (novoLastName) => set((state) => ({...state, lastName: novoLastName})),
-
+  setUser: novoUser => set((state) => ({
+    ...state,
+    user: novoUser
+  })),
 }));

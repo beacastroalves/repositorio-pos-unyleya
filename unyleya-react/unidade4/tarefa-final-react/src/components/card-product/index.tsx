@@ -1,12 +1,18 @@
-import imagemProduct from '../../assets/images/loojiinhaRCT.png'
+import type { Product } from '../../models/productList.model';
 import './style.css';
 
-const CardProduct = () => {
+interface Props {
+  product: Product;
+}
+
+const CardProduct: React.FC<Props> = ({
+  product,
+}) => {
   return (
     <div className='container-card-product'>
-      <h2>Nome do produto</h2>
-      <img src={imagemProduct} alt={`Imagem do produto nome do produto`} />
-      <p>R$ 000</p>
+      <h2>{product.title}</h2>
+      <img src={product.thumbnail} alt={`Imagem do produto nome do produto`} />
+      <p>$ {product.price}</p>
     </div>
   );
 };
