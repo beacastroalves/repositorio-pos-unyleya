@@ -3,7 +3,7 @@ import CardProduct from '../../components/card-product';
 import api from '../../services/api';
 import './style.css';
 import type { Product } from '../../models/productList.model';
-
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -28,10 +28,11 @@ const ProductList = () => {
       <div className='content-list'>
         {
           products.map(product =>
-            <CardProduct
-              key={product.id}
-              product={product}
-            />
+            <Link to={`/product/${product.id}`} key={product.id}>
+              <CardProduct
+                product={product}
+              />
+            </Link>
           )
         }
       </div>

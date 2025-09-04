@@ -5,6 +5,7 @@ import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './pages/login/index.tsx'
 import ProductList from './pages/product-list/index.tsx'
+import ProductDetails from './pages/product-details/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,8 @@ const router = createBrowserRouter([
     Component: App,
     children: [
       { index: true, Component: ProductList },
-      { path: 'login', Component: Login, }
+      { path: 'login', Component: Login, },
+      { path: 'product/:id', Component: ProductDetails, }
     ],
   }
 ])
