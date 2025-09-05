@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import type { AuthResponse } from '../../models/auth.model';
 
-
-
 const Login = () => {
 
   const navigate = useNavigate();

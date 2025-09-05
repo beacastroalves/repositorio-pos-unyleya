@@ -1,9 +1,4 @@
-// import axios from 'axios';
 import { Mock } from './mock';
-
-// const api = axios.create({
-//   baseURL: 'https://api-products-dh-next.vercel.app/',
-// });
 
 interface RequestOptions {
   headers?: {
@@ -21,7 +16,6 @@ const api = {
     if (!date.getTime() || date.getTime() < new Date().getTime()) {
       throw Error('Token Invalid or Expired');
     }
-
 
     if (url.startsWith('/teams')) {
       data = Mock.getTeams() as T;
@@ -50,7 +44,5 @@ const api = {
     return { data };
   }
 };
-
-
 
 export default api;

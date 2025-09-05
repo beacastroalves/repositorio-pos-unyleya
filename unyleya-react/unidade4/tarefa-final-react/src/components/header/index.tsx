@@ -3,9 +3,7 @@ import logo from '../../assets/images/loojiinhaRCT.png'
 import { Link, useNavigate, } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
-
 const Header = () => {
-
   const { user, setUser } = useAuth();
   const navigate = useNavigate();
 

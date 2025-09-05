@@ -1,7 +1,6 @@
 .container-product-details {
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
 .container-product-details .shadow {
@@ -12,7 +11,6 @@
   transform: rotateZ(-3deg);
   margin-bottom: 16px;
   user-select: none;
-
 }
 
 .container-product-details h2,

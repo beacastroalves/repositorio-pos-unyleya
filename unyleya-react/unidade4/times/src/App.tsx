@@ -8,7 +8,6 @@ import Products from "./pages/products";
 import DetailsProduct from "./pages/datails-product";
 import NotFoundPage from "./pages/not-found";
 
-
 const router = createBrowserRouter([
   {
     path: '/',
